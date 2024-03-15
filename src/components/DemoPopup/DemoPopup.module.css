@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: palegoldenrod;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  backdrop-filter: blur(4px);
+}
+
+.button {
+  width: min-content;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  box-shadow: inset;
+}
+
+.card {
+  width: 80dvw;
+  height: 80dvh;
+}
+.card__head {
+  padding: 0;
+  margin-top: 0;
+}

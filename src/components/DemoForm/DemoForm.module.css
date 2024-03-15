@@ -1,0 +1,30 @@
+.form {
+  box-sizing: border-box;
+  padding: 20% 20% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Это примерное значение, соответствующее gap-y-2 в Tailwind CSS */
+}
+
+.input {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.error {
+  color: #f56565;
+}
+
+.submit {
+  background-color: #3b82f6; /* bg-blue-500 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  border-radius: 0.25rem; /* rounded */
+}
+
+.submit:disabled {
+  background-color: #a0aec0; /* disabled:bg-gray-500 */
+}
