@@ -5,12 +5,17 @@ import DemoRedux from "./components/DemoRedux/DemoRedux"
 import { store } from "./redux/store"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import LandingPage from "./pages/Landing-page/LandingPage"
 import DemoForm from "@components/DemoForm/DemoForm"
 import DemoPopup from "@components/DemoPopup/DemoPopup"
 
 const container = document.getElementById("root")
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
   {
     path: "/redux",
     element: <DemoRedux />,
