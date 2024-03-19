@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import LandingPage from "./pages/Landing-page/LandingPage"
 import DemoForm from "@components/DemoForm/DemoForm"
 import DemoPopup from "@components/DemoPopup/DemoPopup"
+import Callback from "./pages/Landing-page/components/CallbackPopup/Callback"
 
 const container = document.getElementById("root")
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/popup",
     element: <DemoPopup />,
+  },
+  {
+    path: "/callback",
+    element: <Callback />,
   },
 ])
 

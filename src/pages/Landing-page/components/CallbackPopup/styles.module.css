@@ -1,0 +1,9 @@
+.wrapper{
+  border: 1px solid red;
+}
+
+.modal {
+  position: absolute;
+  /* top: calc(50% + 340px);
+  left: calc(46vw + 30px); */
+}

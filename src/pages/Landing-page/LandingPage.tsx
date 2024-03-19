@@ -8,9 +8,7 @@ const LandingPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        {lendingCard.map(item => (
-          <LendingCard {...item} />
-        ))}
+        {lendingCard?.map(item => <LendingCard {...item} />)}
       </div>
       <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.container}>

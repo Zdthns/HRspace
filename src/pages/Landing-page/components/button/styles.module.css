@@ -5,8 +5,9 @@
   color: white;
   background-color: #7E92A3;
   border-color: transparent;
+  cursor: pointer;
 }
 
-.button::before {
-  color: #C6D2DC;
+.button:active {
+  background-color: #C6D2DC;
 }
