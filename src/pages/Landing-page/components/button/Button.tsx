@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes } from "react"
 import styles from "./styles.module.css"
+import classNames from "classnames"
 interface Coords {
   right: number
   top: number
@@ -17,7 +18,11 @@ const Button = ({
   ...props
 }: PropsTypes) => {
   return (
-    <button className={styles.button} name={buttonType} onClick={props.onClick}>
+    <button
+      className={classNames(styles.button, extClassName)}
+      name={buttonType}
+      onClick={props.onClick}
+    >
       {buttonText}
     </button>
   )

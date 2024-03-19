@@ -1,27 +1,35 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./styles.module.css"
 import { OverlayPopup } from "../../../../components/popup/overlay/OverlayPopap"
-import { useAppDispatch } from "@/redux/hooks"
-import { closePopup } from "../../redux/PopupModel/PopupModel"
+import { useAppDispatch, useAppSelector } from "@/redux/hooks"
+import { closePopup } from "../../../../redux/slices/PopupModel/PopupModel"
+import Popup from "@/components/popup/Popup"
 
 const Callback = () => {
   const dispatch = useAppDispatch()
-  const [isOpen, setIsOpen] = useState(false)
+  const { isPopupOpen } = useAppSelector(store => store.PopupModel)
+
   const popupClose = () => {
-    setIsOpen(false)
+    dispatch(closePopup())
+    console.log(isPopupOpen)
   }
   const closeByEsc = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
       dispatch(closePopup())
     }
   }
-
+  useEffect(() => {
+    document.addEventListener("keydown", closeByEsc)
+    return () => {
+      document.removeEventListener("keydown", closeByEsc)
+    }
+  }, [])
+  const name = "Обратный звонок"
   return (
     <div className={styles.wrapper}>
-      <OverlayPopup
-        isOpened={isOpen}
-        onClose={isOpen ? undefined : popupClose}
-      />
+      <OverlayPopup isOpened={isPopupOpen} onClose={popupClose}>
+        <Popup heading={name} />
+      </OverlayPopup>
     </div>
   )
 }

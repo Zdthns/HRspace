@@ -1,11 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAppSlice } from "@/redux/createAppSlice";
 
-export const InitialStatePopup = {
+type TInitialStatePopup = {
+  isPopupOpen: boolean,
+  isType: string
+}
+export const InitialStatePopup: TInitialStatePopup = {
   isPopupOpen: false,
   isType: 'callback'
 }
 
-export const createRequestModel = createSlice({
+export const popupModelSlice = createAppSlice({
   name: 'create-request',
   initialState: InitialStatePopup,
   reducers: {
@@ -21,4 +25,4 @@ export const createRequestModel = createSlice({
 export const {
   openPopup,
   closePopup,
-} = createRequestModel.actions;
+} = popupModelSlice.actions;

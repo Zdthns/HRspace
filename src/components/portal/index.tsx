@@ -1,17 +1,17 @@
-import { ReactNode } from 'react';
-import ReactDOM from 'react-dom';
+import { ReactNode } from "react"
+import ReactDOM from "react-dom"
 
 interface IPortalProps {
-  children: ReactNode;
-  isOpened: boolean;
+  children: ReactNode
+  isOpened: boolean
 }
 
-const modalRoot = document.getElementById('modal') as HTMLElement;
+const modalRoot = document.getElementById("modals") as HTMLElement
 
 export const Portal = ({ children, isOpened }: IPortalProps) => {
   if (!isOpened) {
-    return null;
+    return null
   }
 
-  return ReactDOM.createPortal(children, modalRoot);
-};
+  return ReactDOM.createPortal(children, modalRoot)
+}

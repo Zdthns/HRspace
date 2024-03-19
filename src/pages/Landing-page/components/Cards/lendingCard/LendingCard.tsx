@@ -1,8 +1,10 @@
 import React, { ReactElement } from "react"
-import { useAppDispatch } from "@/redux/hooks"
+import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import styles from "./styles.module.css"
 import Button from "../../button/Button"
-import { openPopup } from "../../../redux/PopupModel/PopupModel"
+import { openPopup } from "../../../../../redux/slices/PopupModel/PopupModel"
+import Callback from "../../CallbackPopup/Callback"
+import { createLogger } from "vite"
 
 export type lendingCardTypes = {
   cardName: string
@@ -14,9 +16,10 @@ export type lendingCardTypes = {
 
 const Card = (lending: lendingCardTypes) => {
   const dispatch = useAppDispatch()
+  const { isPopupOpen } = useAppSelector(store => store.PopupModel)
   const handleClickButton = () => {
-    console.log("bum")
     dispatch(openPopup())
+    console.log(isPopupOpen)
   }
   return (
     <div className={styles.card}>
@@ -37,6 +40,7 @@ const Card = (lending: lendingCardTypes) => {
           buttonText={lending.buttonText}
         />
       </div>
+      {isPopupOpen && <Callback />}
     </div>
   )
 }
