@@ -91,3 +91,50 @@ export const lendingCard: LendingCardType[] = [
     image: "https://s1.1zoom.ru/big3/111/348270-admin.jpg",
   },
 ]
+export type TData = {
+  dataSetInput: TdataSetInput[]
+  dataSetButton?: TdataSetButton[]
+  heading?: string
+  buttonText?: string
+}
+
+export type TdataSetInput = {
+  label?: string
+  placeholder: string
+  type: string
+}
+
+export type TdataSetButton = {
+  buttonType: "add" | "search" | "callback"
+  buttonText: string
+}
+export const setDataSearch: TData = {
+  dataSetInput: [{ placeholder: "Город или регион", type: "text" }],
+  dataSetButton: [{ buttonType: "search", buttonText: "найти" }],
+  heading: "Укажите город или регион",
+  buttonText: "Показать",
+}
+export const setDataCallback: TData = {
+  dataSetInput: [
+    { placeholder: "Ваше имя", type: "text" },
+    { placeholder: "+7(___)___*__*__", type: "tel" },
+  ],
+  dataSetButton: [{ buttonType: "callback", buttonText: "Заказать звонок" }],
+  heading: "Обратный звонок",
+  buttonText: "Заказать звонок",
+}
+export const setDataCall: TData = {
+  dataSetInput: [
+    {
+      label: "Для Москвы и области",
+      placeholder: "8 495 974-64-27",
+      type: "text",
+    },
+    {
+      label: "Для Санкт-Петербурга и области",
+      placeholder: "8 812 458-45-45",
+      type: "text",
+    },
+    { label: "Для регионов", placeholder: "8 800 100-64-27", type: "text" },
+  ],
+}

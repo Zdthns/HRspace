@@ -3,8 +3,6 @@ import styles from "./styles.module.css"
 import LendingCard from "./components/Cards/lendingCard/LendingCard"
 import RecruiterCard from "./components/Cards/RecruiterCard/RecruiterCard"
 import { heading, recruiter, lendingCard } from "./components/props"
-import Callback from "./components/CallbackPopup/Callback"
-import { useAppSelector } from "@/redux/hooks"
 
 const LandingPage = () => {
   return (

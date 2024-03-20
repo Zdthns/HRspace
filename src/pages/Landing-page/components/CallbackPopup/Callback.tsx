@@ -4,8 +4,13 @@ import { OverlayPopup } from "../../../../components/popup/overlay/OverlayPopap"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { closePopup } from "../../../../redux/slices/PopupModel/PopupModel"
 import Popup from "@/components/popup/Popup"
+import { lendingCardTypes } from "../Cards/lendingCard/LendingCard"
+import { TData, setDataCall, setDataCallback, setDataSearch } from "../props"
 
-const Callback = () => {
+type propType = {
+  data: TData
+}
+const Callback = (props: propType) => {
   const dispatch = useAppDispatch()
   const { isPopupOpen } = useAppSelector(store => store.PopupModel)
 
@@ -24,11 +29,13 @@ const Callback = () => {
       document.removeEventListener("keydown", closeByEsc)
     }
   }, [])
-  const name = "Обратный звонок"
+
+  //***********
+
   return (
     <div className={styles.wrapper}>
       <OverlayPopup isOpened={isPopupOpen} onClose={popupClose}>
-        <Popup heading={name} />
+        <Popup dataSet={props.data} />
       </OverlayPopup>
     </div>
   )
