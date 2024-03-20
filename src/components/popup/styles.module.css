@@ -31,5 +31,10 @@ justify-content: center
   margin: 20 auto;
   width: 256px;
   height: 40px;
-
+}
+label {
+  color: #303233;
+  font-size: 14px;
+  line-height: 19.6px;
+  display: block;
 }

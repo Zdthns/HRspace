@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react"
 import styles from "./styles.module.css"
 import Button from "../../pages/Landing-page/components/button/Button"
-import { lendingCardTypes } from "@/pages/Landing-page/components/Cards/lendingCard/LendingCard"
 import {
   TData,
   TdataSetButton,
@@ -10,13 +9,9 @@ import {
 
 type propsType = {
   dataSet: TData
-  //heading: string
-  //name: "add" | "search" | "callback"
 }
 
 const Popup = (dataSet: propsType) => {
-  console.log(dataSet.dataSet)
-
   const { dataSetInput, dataSetButton, heading, buttonText } = dataSet.dataSet
 
   return (
@@ -25,11 +20,14 @@ const Popup = (dataSet: propsType) => {
       <div className={styles.container}>
         <form>
           {dataSetInput?.map((item: TdataSetInput) => (
-            <input
-              className={styles.input}
-              placeholder={item.placeholder}
-              type={item.type}
-            />
+            <>
+              <label>{item.label}</label>
+              <input
+                className={styles.input}
+                placeholder={item.placeholder}
+                type={item.type}
+              />
+            </>
           ))}
           {dataSetButton?.map((item: TdataSetButton) => (
             <Button

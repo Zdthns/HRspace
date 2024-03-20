@@ -81,11 +81,10 @@ export const lendingCard: LendingCardType[] = [
     cardName: "Найти рекрутера",
 
     captions: (
-      <span>
+      <>
         Нужна помощь в создании заявки?
-        <a href="tel:+79150000000">Позвоните нам</a> или закажите обратный
-        звонок{" "}
-      </span>
+        <span id="call">Позвоните нам</span> или закажите обратный звонок{" "}
+      </>
     ),
     buttonText: "Заказать звонок",
     image: "https://s1.1zoom.ru/big3/111/348270-admin.jpg",

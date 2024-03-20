@@ -5,12 +5,17 @@
   align-items: center;
   justify-content: space-between;
 }
-
+span {
+  color: blue;
+  text-decoration: dashed;
+  cursor: pointer;
+}
 .image_wrapper {
   padding: 10px;
   display: flex;
   align-items:center;
   justify-content: center;
+  z-index: 10;
 }
 
 .image {

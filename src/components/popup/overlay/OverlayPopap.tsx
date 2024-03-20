@@ -25,7 +25,6 @@ export const OverlayPopup = ({
       <div className={classNames(styles.popup)}>
         <div
           className={classNames(styles.overlay, extClassName)}
-          tabIndex={0}
           onClick={onClose}
         ></div>
         {children}

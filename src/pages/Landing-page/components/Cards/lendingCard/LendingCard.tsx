@@ -1,15 +1,15 @@
-import React, { ReactElement } from "react"
+import React, { ReactElement, useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import styles from "./styles.module.css"
 import Button from "../../button/Button"
 import { openPopup } from "../../../../../redux/slices/PopupModel/PopupModel"
 import Callback from "../../CallbackPopup/Callback"
-import { setDataCallback, setDataSearch } from "../../props"
+import { setDataCall, setDataCallback, setDataSearch } from "../../props"
 
 export type lendingCardTypes = {
   cardName?: string
   captions?: string | ReactElement
-  buttonType: "add" | "search" | "callback"
+  buttonType: "add" | "search" | "callback" | "call"
   buttonText: string
   image?: string
 }
@@ -30,8 +30,22 @@ const Card = (lending: lendingCardTypes) => {
     if (data === "callback") {
       return setDataCallback
     }
+    if (data === "call") {
+      return setDataCall
+    }
     return setDataSearch
   }
+
+  const calltest = () => {
+    dispatch(openPopup("call"))
+  }
+
+  useEffect(() => {
+    document.getElementById("call")?.addEventListener("click", calltest)
+    return () => {
+      document.getElementById("call")?.removeEventListener("click", calltest)
+    }
+  }, [])
 
   return (
     <div className={styles.card}>

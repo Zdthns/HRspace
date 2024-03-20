@@ -7,7 +7,7 @@ interface Coords {
 }
 interface PropsTypes extends ButtonHTMLAttributes<HTMLButtonElement> {
   extClassName?: string
-  buttonType: "add" | "search" | "callback"
+  buttonType: "add" | "search" | "callback" | "call"
   buttonText: string
   onClick?: () => void
 }

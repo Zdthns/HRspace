@@ -2,7 +2,7 @@ import { createAppSlice } from "@/redux/createAppSlice";
 
 type TInitialStatePopup = {
   isPopupOpen: boolean,
-  isType: "add" | "search" | "callback" | ''
+  isType: "add" | "search" | "callback" | 'call' | ''
 }
 export const InitialStatePopup: TInitialStatePopup = {
   isPopupOpen: false,

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styles from "./styles.module.css"
 import LendingCard from "./components/Cards/lendingCard/LendingCard"
 import RecruiterCard from "./components/Cards/RecruiterCard/RecruiterCard"
