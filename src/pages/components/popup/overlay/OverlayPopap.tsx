@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React, { ReactNode } from "react"
 import styles from "./styles.module.css"
-import { Portal } from "../../portal"
+import { Portal } from "../../../components/portal"
 
 interface OverlayingPopupProps {
   children?: ReactNode
@@ -14,7 +14,6 @@ export const OverlayPopup = ({
   children,
   onClose,
   isOpened,
-  extClassName,
 }: OverlayingPopupProps) => {
   if (!isOpened) {
     return null
@@ -22,11 +21,8 @@ export const OverlayPopup = ({
 
   return (
     <Portal isOpened>
-      <div className={classNames(styles.popup)}>
-        <div
-          className={classNames(styles.overlay, extClassName)}
-          onClick={onClose}
-        ></div>
+      <div className={styles.popup}>
+        <div className={styles.overlay} onClick={onClose}></div>
         {children}
       </div>
     </Portal>

@@ -2,8 +2,8 @@ import React, { ReactElement, useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import styles from "./styles.module.css"
 import Button from "../../button/Button"
-import { openPopup } from "../../../../../redux/slices/PopupModel/PopupModel"
-import Callback from "../../CallbackPopup/Callback"
+import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel"
+import Distributor from "../../Distributor/Distributor"
 import { setDataCall, setDataCallback, setDataSearch } from "../../props"
 
 export type lendingCardTypes = {
@@ -17,6 +17,7 @@ export type lendingCardTypes = {
 const Card = (lending: lendingCardTypes) => {
   const dispatch = useAppDispatch()
   const { isPopupOpen, isType } = useAppSelector(store => store.PopupModel)
+
   const handleClickButton = () => {
     dispatch(openPopup(lending.buttonType))
   }
@@ -66,7 +67,7 @@ const Card = (lending: lendingCardTypes) => {
           buttonText={lending.buttonText}
         />
       </div>
-      {isPopupOpen && <Callback data={setData(isType)} />}
+      {isPopupOpen && <Distributor data={setData(isType)} />}
     </div>
   )
 }

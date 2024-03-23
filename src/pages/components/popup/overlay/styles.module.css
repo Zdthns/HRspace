@@ -6,12 +6,10 @@
   right: 0;
   padding: 30px;
   box-sizing: border-box;
-  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
 }
 
 .overlay {
@@ -20,5 +18,5 @@
   bottom: 0;
   left: 0;
   right: 0;
-  cursor: pointer;
+  z-index: 1;
 }
