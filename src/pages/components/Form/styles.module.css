@@ -19,13 +19,6 @@ label {
   display: block;
 }
 
-form {
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-}
-
 .button{
   margin: 20 auto;
   width: 256px;

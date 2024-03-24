@@ -1,10 +1,11 @@
-import React, { ReactElement, useEffect } from "react"
-import { useAppDispatch, useAppSelector } from "@/redux/hooks"
-import styles from "./styles.module.css"
-import Button from "../../button/Button"
-import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel"
-import Distributor from "../../Distributor/Distributor"
-import { setDataCall, setDataCallback, setDataSearch } from "../../props"
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import type { ReactElement } from "react";
+import { useEffect } from "react";
+import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel";
+import Distributor from "../../Distributor/Distributor";
+import Button from "../../button/Button";
+import { setDataCall, setDataCallback, setDataSearch } from "../../props";
+import styles from "./styles.module.css";
 
 export type lendingCardTypes = {
   cardName?: string

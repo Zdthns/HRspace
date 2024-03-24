@@ -1,4 +1,3 @@
-import React from "react"
 import StarRatings from "react-star-ratings"
 import styles from "./styles.module.css"
 

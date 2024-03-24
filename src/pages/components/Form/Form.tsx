@@ -1,11 +1,12 @@
-import {
+import type {
   TData,
   TForm,
   TdataSetButton,
   TdataSetInput,
 } from "@/pages/types/typesLending"
 import styles from "./styles.module.css"
-import { useForm, SubmitHandler, RegisterOptions } from "react-hook-form"
+import type { SubmitHandler} from "react-hook-form";
+import { useForm, RegisterOptions } from "react-hook-form"
 import Button from "../button/Button"
 
 type PropTypes = {

@@ -1,5 +1,5 @@
-import { ReactEventHandler, useState } from "react";
-import { TForm } from "../../../types/typesLending";
+import { useState } from "react";
+import type { TForm } from "../../../types/typesLending";
 
 export function useHookForm(inputValues: TForm) {
   const [values, setValues] = useState(inputValues);
