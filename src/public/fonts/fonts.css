@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  src: url("./proximanovacond_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TWK Lausanne";
+  src: url("./TWKLausannePan-300.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
