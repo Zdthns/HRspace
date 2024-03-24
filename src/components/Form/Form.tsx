@@ -68,8 +68,9 @@ export function Form() {
       >
         <p
           style={{
-            fontSize: 14,
-            height: 20,
+            fontSize: 12,
+            height: 13.8,
+            color: "var(--text-link)",
             margin: "32px 0 40px",
           }}
         >
