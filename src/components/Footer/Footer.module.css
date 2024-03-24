@@ -1,0 +1,85 @@
+.footer {
+  padding: 40px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #FAFAFA;
+}
+
+.list {
+  font-family: "TWK Lausanne Pan";
+  font-weight: 300;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 147px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "TWK Lausanne";
+  line-height: 19.6px;
+  color: #303233;
+}
+
+.region {
+  color: #303233;
+}
+
+.number {
+  text-decoration: none;
+  color: #303233;
+  opacity: 0.4;
+}
+
+.company-info {
+  display: flex;
+  gap: 366.5px;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logo-title {
+  inline-size: 80px;
+  block-size: 21px;
+}
+
+.logo {
+  inline-size: 46px;
+  block-size: 46px;
+}
+
+.company {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19.6px;
+  color: #303233;
+  white-space: nowrap;
+  margin: 0;
+  opacity: 0.4;
+}
+
+.networks {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  inline-size: 40px;
+  block-size: 40px;
+}
