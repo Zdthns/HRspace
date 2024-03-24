@@ -1,13 +1,11 @@
-import React from "react"
-
-const Header = () => {
+export function Header() {
   return (
-    <div className="">
-      <>logo</>
-      <>nav</>
-      <>profile</>
-    </div>
+    <header
+      style={{
+        // height: 80,
+        height: 50,
+        background: "gray",
+      }}
+    ></header>
   )
 }
-
-export default Header

@@ -1,4 +1,4 @@
-import { LendingCardType, TData } from "../types/typesLending"
+import type { LendingCardType, TData } from "../types/typesLending"
 export const heading = "Поиск рекрутеров по всей стране"
 
 export const recruiter = [

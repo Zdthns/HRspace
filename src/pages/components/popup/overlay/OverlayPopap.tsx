@@ -1,5 +1,6 @@
 import classNames from "classnames"
-import React, { ReactNode } from "react"
+import type { ReactNode } from "react";
+import React from "react"
 import styles from "./styles.module.css"
 import { Portal } from "../../../components/portal"
 

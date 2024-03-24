@@ -1,7 +1,10 @@
-import React, { ChangeEventHandler, ReactNode } from "react"
+import type { ChangeEventHandler} from "react";
+import type React from "react";
+import { ReactNode } from "react"
 import styles from "./styles.module.css"
 import Button from "../button/Button"
-import { TData, TdataSetButton, TdataSetInput } from "../../types/typesLending"
+import type { TData} from "../../types/typesLending";
+import { TdataSetButton, TdataSetInput } from "../../types/typesLending"
 import Form from "../Form/Form"
 import { useHookForm } from "../Form/hook/useForm"
 import { IoClose } from "react-icons/io5"
