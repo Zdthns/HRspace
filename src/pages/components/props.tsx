@@ -83,65 +83,65 @@ export const lendingCards: LendingCardType[] = [
   },
 ]
 
-export const setDataSearch: TData = {
-  dataSetInput: [
-    {
-      name: "city",
-      placeholder: "Город или регион",
-      type: "text",
-    },
-  ],
-  dataSetButton: [{ buttonType: "search", buttonText: "Показать" }],
+//export const setDataSearch: TData = {
+//  dataSetInput: [
+//    {
+//      name: "city",
+//      placeholder: "Город или регион",
+//      type: "text",
+//    },
+//  ],
+//  dataSetButton: [{ buttonType: "search", buttonText: "Показать" }],
 
-  heading: "Укажите город или регион",
-}
-export const setDataCallback: TData = {
-  dataSetInput: [
-    {
-      placeholder: "Ваше имя",
-      type: "text",
-      name: "name",
-      minLength: "2",
-      maxLength: "35",
-    },
-    { placeholder: "+7(___)___*__*__", type: "tel", name: "phone" },
-  ],
-  dataSetButton: [{ buttonType: "callback", buttonText: "Заказать звонок" }],
-
-  heading: "Обратный звонок",
-}
-export const setDataCall: TData = {
-  dataSetInput: [
-    {
-      label: "Для Москвы и области",
-      value: "8 495 974-64-27",
-      type: "text",
-      name: "phone",
-    },
-    {
-      label: "Для Санкт-Петербурга и области",
-      value: "8 812 458-45-45",
-      type: "text",
-      name: "phone",
-    },
-    {
-      label: "Для регионов",
-      value: "8 800 100-64-27",
-      type: "text",
-      name: "phone",
-    },
-  ],
-}
-
-export const callbackFieldSet = {
-  name: "name",
-  tel: "phone",
-}
-export const DataCallFieldSet = {
-  tel1: "phone",
-  tel2: "phone",
-  tel3: "phone",
-}
-//const searchFieldSet = {
-
+//  heading: "Укажите город или регион",
 //}
+//export const setDataCallback: TData = {
+//  dataSetInput: [
+//    {
+//      placeholder: "Ваше имя",
+//      type: "text",
+//      name: "name",
+//      minLength: "2",
+//      maxLength: "35",
+//    },
+//    { placeholder: "+7(___)___*__*__", type: "tel", name: "phone" },
+//  ],
+//  dataSetButton: [{ buttonType: "callback", buttonText: "Заказать звонок" }],
+
+//  heading: "Обратный звонок",
+//}
+//export const setDataCall: TData = {
+//  dataSetInput: [
+//    {
+//      label: "Для Москвы и области",
+//      value: "8 495 974-64-27",
+//      type: "text",
+//      name: "phone",
+//    },
+//    {
+//      label: "Для Санкт-Петербурга и области",
+//      value: "8 812 458-45-45",
+//      type: "text",
+//      name: "phone",
+//    },
+//    {
+//      label: "Для регионов",
+//      value: "8 800 100-64-27",
+//      type: "text",
+//      name: "phone",
+//    },
+//  ],
+//}
+
+//export const callbackFieldSet = {
+//  name: "name",
+//  tel: "phone",
+//}
+//export const DataCallFieldSet = {
+//  tel1: "phone",
+//  tel2: "phone",
+//  tel3: "phone",
+//}
+////const searchFieldSet = {
+
+////}

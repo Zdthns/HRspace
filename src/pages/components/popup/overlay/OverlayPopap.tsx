@@ -23,7 +23,7 @@ export const OverlayPopup = ({
   return (
     <Portal isOpened>
       <div className={styles.popup}>
-        <div className={styles.overlay} onClick={onClose}></div>
+        {/*<div className={styles.overlay} onClick={onClose}/>*/}
         {children}
       </div>
     </Portal>

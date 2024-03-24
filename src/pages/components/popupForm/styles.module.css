@@ -19,8 +19,29 @@ label {
   display: block;
 }
 
+form {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color:  #303233;
+  }
+
 .button{
   margin: 20 auto;
   width: 256px;
   height: 40px;
+}
+.errorMessage{
+  color: red;
+}
+
+.select {
+  border: 1px solid red;
 }

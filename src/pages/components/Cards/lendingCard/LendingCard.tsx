@@ -1,11 +1,13 @@
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import type { ReactElement } from "react";
-import { useEffect } from "react";
-import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel";
-import Distributor from "../../Distributor/Distributor";
-import Button from "../../button/Button";
-import { setDataCall, setDataCallback, setDataSearch } from "../../props";
-import styles from "./styles.module.css";
+import React, { ReactElement, useEffect } from "react"
+import { useAppDispatch, useAppSelector } from "@/redux/hooks"
+import styles from "./styles.module.css"
+import Button from "../../button/Button"
+import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel"
+import Distributor from "../../Distributor/Distributor"
+import SearchCity from "../../popupForm/searchCity/SearchCity"
+import Callback from "../../popupForm/callback/callback"
+import Contacts from "../../popupForm/contacts/Contacts"
+import { useNavigate } from "react-router-dom"
 
 export type lendingCardTypes = {
   cardName?: string
@@ -16,26 +18,27 @@ export type lendingCardTypes = {
 }
 
 const Card = (lending: lendingCardTypes) => {
+  const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const { isPopupOpen, isType } = useAppSelector(store => store.PopupModel)
 
   const handleClickButton = () => {
-    dispatch(openPopup(lending.buttonType))
+    if (lending.buttonType !== "add") {
+      dispatch(openPopup(lending.buttonType))
+    } else return navigate("/form")
   }
+
   const setData = (data: string) => {
-    if (data === "add") {
-      return setDataSearch
-    }
     if (data === "search") {
-      return setDataSearch
+      return <SearchCity />
     }
     if (data === "callback") {
-      return setDataCallback
+      return <Callback />
     }
     if (data === "call") {
-      return setDataCall
+      return <Contacts />
     }
-    return setDataSearch
+    return <Contacts />
   }
 
   const calltest = () => {

@@ -1,13 +1,12 @@
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
-import { useEffect, useCallback } from "react"
+import { useEffect, useCallback, ReactNode } from "react"
 import { closePopup } from "../../../redux/slices/PopupModel/PopupModel"
-import type { TData } from "../../types/typesLending"
 import Popup from "../popup/Popup"
 import { OverlayPopup } from "../popup/overlay/OverlayPopap"
 import styles from "./styles.module.css"
 
 type propType = {
-  data: TData
+  data: ReactNode
 }
 const Distributor = (props: propType) => {
   const dispatch = useAppDispatch()
@@ -16,12 +15,15 @@ const Distributor = (props: propType) => {
   const popupClose = () => {
     dispatch(closePopup())
   }
-  const closeByEsc = useCallback((e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      dispatch(closePopup())
-    }
-  }, [dispatch])
-  
+  const closeByEsc = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        dispatch(closePopup())
+      }
+    },
+    [dispatch],
+  )
+
   useEffect(() => {
     document.addEventListener("keydown", closeByEsc)
     return () => {
@@ -32,7 +34,7 @@ const Distributor = (props: propType) => {
   return (
     <div className={styles.wrapper}>
       <OverlayPopup isOpened={isPopupOpen} onClose={popupClose}>
-        <Popup dataSet={props.data} onClose={popupClose} />
+        <Popup onClose={popupClose} children={props.data} />
       </OverlayPopup>
     </div>
   )
