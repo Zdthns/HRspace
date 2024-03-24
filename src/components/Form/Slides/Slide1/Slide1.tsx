@@ -7,6 +7,7 @@ import { CitySelect } from "../../components/Selects/CitySelect"
 import { ProfSelect } from "../../components/Selects/ProfSelect"
 import styles from "./Slide1.module.css"
 import { Error } from "../../Error/Error"
+import image from "@public/slide1.svg"
 
 export function Slide1() {
   const {
@@ -15,16 +16,13 @@ export function Slide1() {
   } = useFormContext<ZSlide1>()
 
   return (
-    <FormLayout layoutClass={styles["layout"]}>
+    <FormLayout layoutClass={styles["layout"]} srcImage={image}>
       <h2 className={styles["head"]}>Заполните данные по вакансии</h2>
       <h3 style={{ marginTop: 15 }} className={styles["name-label"]}>
         Название вакансии*
       </h3>
       <div className={styles["name"]}>
         <input
-          style={{
-            boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
-          }}
           type="text"
           {...register("name")}
           placeholder="Грузчик"

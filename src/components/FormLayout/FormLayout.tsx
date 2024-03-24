@@ -4,22 +4,22 @@ import "./react-select.css"
 type FormLayoutProps = {
   children: React.ReactNode
   layoutClass?: string
-  withPhoto?: boolean
+  srcImage?: string
 }
 
 export function FormLayout({
   children,
   layoutClass,
-  withPhoto = true,
+  srcImage,
 }: FormLayoutProps) {
   return (
     <div
       className={clsx(
         styles["form-layout"],
-        withPhoto && styles["form-layout__with-photo"],
+        srcImage && styles["form-layout__with-photo"],
       )}
     >
-      {withPhoto && <div className={styles["form-layout__image"]} />}
+      {srcImage && <img src={srcImage} alt="кОртинка" className={styles["form-layout__image"]} />}
       <div className={clsx(styles["form-layout__form"], layoutClass)}>
         {children}
       </div>

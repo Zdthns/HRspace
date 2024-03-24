@@ -1,4 +1,5 @@
 .form-layout {
+  display: flex;
   margin: 0 0 25px;
   box-sizing: border-box;
   width: 100%;
@@ -6,9 +7,8 @@
 
 .form-layout h2 {
   margin: 0 0 20px;
-  font-weight: bold;
-  font-size: 18px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 28px;
 }
 
 .form-layout h3 {
@@ -31,7 +31,7 @@
 }
 
 .form-layout__image {
-  background-color: #7fffd44c;
+  margin: auto 0;
   grid-area: image;
 }
 

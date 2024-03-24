@@ -77,8 +77,9 @@ export function Form() {
         </p>
         <h1
           style={{
-            margin: "0 0 39px",
-            fontSize: 24,
+            margin: "0 0 24px",
+            fontSize: 36,
+            fontWeight: 400,
           }}
         >
           Добавление заявки
