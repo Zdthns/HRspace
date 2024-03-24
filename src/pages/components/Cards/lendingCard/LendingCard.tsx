@@ -18,16 +18,16 @@ export type lendingCardTypes = {
 }
 
 const Card = (lending: lendingCardTypes) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const { isPopupOpen, isType } = useAppSelector(store => store.PopupModel)
 
   const handleClickButton = () => {
     if (lending.buttonType !== "add") {
       dispatch(openPopup(lending.buttonType))
-    } else return navigate("/addForm")
+    } else return navigate("/form")
   }
-  const addForm = () => {}
+
   const setData = (data: string) => {
     if (data === "search") {
       return <SearchCity />
