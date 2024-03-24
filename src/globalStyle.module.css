@@ -1,0 +1,13 @@
+.marginLeft {
+  margin-left: 110px;
+}
+
+.paddingLeft {
+  padding-left: 110px;
+}
+
+.checkBox {
+  margin: 0;
+  width: 20px;
+  aspect-ratio: 1;
+}

@@ -1,25 +1,19 @@
-import React from "react"
-import { createRoot } from "react-dom/client"
-import { Provider } from "react-redux"
-import DemoRedux from "./components/DemoRedux/DemoRedux"
-import { store } from "./redux/store"
-import "./index.css"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import LandingPage from "./pages/Landing-page/LandingPage"
 import DemoForm from "@components/DemoForm/DemoForm"
 import DemoPopup from "@components/DemoPopup/DemoPopup"
-import Callback from "./pages/components/Distributor/Distributor"
-
+import { createRoot } from "react-dom/client"
+import { Provider } from "react-redux"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Form } from "@components/Form/Form"
+import "./index.css"
+import { store } from "./redux/store"
+import "@/lib/zod/ru-zod"
+import LandingPage from "./pages/Landing-page/LandingPage"
 const container = document.getElementById("root")
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
-  },
-  {
-    path: "/redux",
-    element: <DemoRedux />,
   },
   {
     path: "/form",
@@ -29,17 +23,19 @@ const router = createBrowserRouter([
     path: "/popup",
     element: <DemoPopup />,
   },
+  {
+    path: "/main",
+    element: <Form />,
+  },
 ])
 
 if (container) {
   const root = createRoot(container)
 
   root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <RouterProvider router={router} />
-      </Provider>
-    </React.StrictMode>,
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>,
   )
 } else {
   throw new Error(

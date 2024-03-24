@@ -1,8 +1,7 @@
-import React, { useEffect } from "react"
-import styles from "./styles.module.css"
-import LendingCard from "../components/Cards/lendingCard/LendingCard"
 import RecruiterCard from "../components/Cards/RecruiterCard/RecruiterCard"
-import { heading, recruiter, lendingCards } from "../components/props"
+import LendingCard from "../components/Cards/lendingCard/LendingCard"
+import { heading, lendingCards, recruiter } from "../components/props"
+import styles from "./styles.module.css"
 
 const LandingPage = () => {
   return (

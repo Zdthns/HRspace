@@ -1,10 +1,10 @@
-import React, { ReactElement, ReactNode, useEffect, useState } from "react"
-import styles from "./styles.module.css"
-import { OverlayPopup } from "../popup/overlay/OverlayPopap"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
+import { useEffect, useCallback } from "react"
 import { closePopup } from "../../../redux/slices/PopupModel/PopupModel"
+import type { TData } from "../../types/typesLending"
 import Popup from "../popup/Popup"
-import { TData } from "../../types/typesLending"
+import { OverlayPopup } from "../popup/overlay/OverlayPopap"
+import styles from "./styles.module.css"
 
 type propType = {
   data: ReactNode
@@ -16,17 +16,21 @@ const Distributor = (props: propType) => {
   const popupClose = () => {
     dispatch(closePopup())
   }
-  const closeByEsc = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      dispatch(closePopup())
-    }
-  }
+  const closeByEsc = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        dispatch(closePopup())
+      }
+    },
+    [dispatch],
+  )
+
   useEffect(() => {
     document.addEventListener("keydown", closeByEsc)
     return () => {
       document.removeEventListener("keydown", closeByEsc)
     }
-  }, [])
+  }, [closeByEsc])
 
   return (
     <div className={styles.wrapper}>

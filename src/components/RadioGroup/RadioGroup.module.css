@@ -1,0 +1,84 @@
+.radio-group__fieldset {
+  border: none; /* Убираем стандартную границу у fieldset, если таковая имеется */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.radio-group__fieldset_citizenship {
+}
+.radio-group__fieldset_education {
+  gap: 24px;
+}
+
+/* 3 */
+.radio-group__fieldset_workSchedule,
+.radio-group__fieldset_workFormat,
+.radio-group__fieldset_contractType,
+.radio-group__fieldset_socialPackage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4 */
+.radio-group__fieldset_paymentType {
+  flex-direction: column;
+}
+.radio-group__fieldset_resumeFormat {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: 306px 306px;
+}
+
+.radio-group__fieldset_resumeFormat .radio-label {
+  font-size: 14px;
+  text-align: center;
+}
+.radio-group__fieldset_employeeCount {
+}
+
+.radio-group__fieldset_employeeCount > .radio-label {
+  padding: 0;
+  aspect-ratio: 1;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5 */
+.radio-group__fieldset_recruiterCount {
+}
+.radio-group__fieldset_recruiterCount > .radio-label {
+  padding: 0;
+  aspect-ratio: 1;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-label {
+  margin: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  cursor: pointer;
+  border: 1px solid #e1e6ec; /* Подготавливаем границу для визуализирования выбора */
+  transition: border-color 0.3s; /* Анимация для смены цвета границы */
+}
+
+.radio-input {
+  display: none; /* Скрываем стандартную радио кнопку */
+}
+
+.radio-label:hover {
+  border: 1px solid #ccc; /* Цвет границы при наведении, можно изменить на нужный */
+}
+
+.radio-label--checked {
+  border: 1px solid #007bff; /* Цвет границы выбранного элемента, можно изменить на нужный */
+}

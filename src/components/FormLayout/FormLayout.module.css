@@ -1,0 +1,40 @@
+.form-layout {
+  margin: 0 0 25px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-layout h2 {
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-layout h3 {
+  margin: 21px 0 7px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.form-layout__with-photo {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 416px 24px 1fr;
+  grid-template-areas: "image . form";
+}
+
+.form-layout__form-head {
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+}
+
+.form-layout__image {
+  background-color: #7fffd44c;
+  grid-area: image;
+}
+
+.form-layout__form {
+  grid-area: form;
+}

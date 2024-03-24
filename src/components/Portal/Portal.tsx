@@ -11,13 +11,13 @@ export default function Portal({
   selectorId,
   portalStyles,
 }: PortalProps) {
-  const portalContainer = document.getElementById(selectorId)
-  if (!portalContainer)
-    return createPortal(
-      <div id={selectorId} style={portalStyles}>
-        {children}
-      </div>,
-      document.body,
-    )
-  return createPortal(children, portalContainer)
+  // const portalContainer = document.getElementById(selectorId)
+  // if (!portalContainer)
+  return createPortal(
+    <div id={selectorId} style={portalStyles}>
+      {children}
+    </div>,
+    document.body,
+  )
+  // return createPortal(children, portalContainer)
 }

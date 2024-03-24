@@ -1,0 +1,28 @@
+.popup {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: coral;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-width: 80dvw;
+  max-height: 90dvh;
+}
+
+.card-input {
+  margin: 12px 0 0;
+  width: 100%;
+  height: 48px;
+  padding: 10px 16px;
+  gap: 8px;
+  border: 1px solid #d9e0f0;
+  border-radius: 8px;
+}

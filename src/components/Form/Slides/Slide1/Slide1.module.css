@@ -1,0 +1,63 @@
+.layout {
+  display: grid;
+  grid-template-rows: min-content 41px min-content 32px min-content 32px min-content 32px min-content;
+  grid-template-columns: 196px 23px 1fr;
+  grid-template-areas:
+    "head head head"
+    ". . ."
+    "name-label . name"
+    ". . ."
+    "prof-label . prof"
+    ". . ."
+    "city-label . city"
+    ". . ."
+    "salary-range-label . salary-range";
+}
+.layout > h3 {
+  margin: 0;
+}
+
+.salary-range {
+  grid-area: salary-range;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  column-gap: 24px;
+}
+
+.head {
+  grid-area: head;
+}
+
+.name {
+  grid-area: name;
+}
+
+.salary-range-label {
+  line-height: 1.5;
+  grid-area: salary-range-label;
+}
+.head-label {
+  grid-area: head-label;
+}
+.name-label {
+  grid-area: name-label;
+}
+.form-label {
+  grid-area: form-label;
+}
+
+.city {
+  grid-area: city;
+}
+.city-label {
+  margin-top: 4px;
+  grid-area: city-label;
+}
+.prof {
+  grid-area: prof;
+}
+.prof-label {
+  margin-top: 4px;
+  grid-area: prof-label;
+}

@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 196px;
+  padding: 10px 12px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.button--next,
+.button--submit {
+  color: white;
+  background-color: #7e92a3;
+}
+
+.button--back {
+  background-color: #bebfbf;
+  color: white;
+}
+
+.button--save {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}

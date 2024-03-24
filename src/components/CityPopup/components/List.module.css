@@ -1,0 +1,14 @@
+.header {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+
+.list {
+  width: 162px;
+  padding-right: 32px;
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 16px;
+}
