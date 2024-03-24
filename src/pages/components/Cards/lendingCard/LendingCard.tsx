@@ -5,6 +5,9 @@ import Button from "../../button/Button"
 import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel"
 import Distributor from "../../Distributor/Distributor"
 import { setDataCall, setDataCallback, setDataSearch } from "../../props"
+import SearchCity from "../../popupForm/searchCity/SearchCity"
+import Callback from "../../popupForm/callback/callback"
+import Contacts from "../../popupForm/contacts/Contacts"
 
 export type lendingCardTypes = {
   cardName?: string
@@ -23,18 +26,18 @@ const Card = (lending: lendingCardTypes) => {
   }
   const setData = (data: string) => {
     if (data === "add") {
-      return setDataSearch
+      return
     }
     if (data === "search") {
-      return setDataSearch
+      return <SearchCity />
     }
     if (data === "callback") {
-      return setDataCallback
+      return <Callback />
     }
     if (data === "call") {
-      return setDataCall
+      return <Contacts />
     }
-    return setDataSearch
+    return <Contacts />
   }
 
   const calltest = () => {

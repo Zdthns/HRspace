@@ -25,12 +25,6 @@ form {
   justify-content: center;
   align-items: center;
 }
-
-.button{
-  margin: 20 auto;
-  width: 256px;
-  height: 40px;
-}
 .heading{
   margin-top: 20px;
   font-size: 16px;
@@ -38,3 +32,12 @@ form {
   line-height: 22.4px;
   color:  #303233;
   }
+
+.button{
+  margin: 20 auto;
+  width: 256px;
+  height: 40px;
+}
+.errorMessage{
+  color: red;
+}

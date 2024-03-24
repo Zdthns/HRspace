@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { ReactElement, ReactNode, useEffect, useState } from "react"
 import styles from "./styles.module.css"
 import { OverlayPopup } from "../popup/overlay/OverlayPopap"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
@@ -7,7 +7,7 @@ import Popup from "../popup/Popup"
 import { TData } from "../../types/typesLending"
 
 type propType = {
-  data: TData
+  data: ReactNode
 }
 const Distributor = (props: propType) => {
   const dispatch = useAppDispatch()
@@ -31,7 +31,7 @@ const Distributor = (props: propType) => {
   return (
     <div className={styles.wrapper}>
       <OverlayPopup isOpened={isPopupOpen} onClose={popupClose}>
-        <Popup dataSet={props.data} onClose={popupClose} />
+        <Popup onClose={popupClose} children={props.data} />
       </OverlayPopup>
     </div>
   )
