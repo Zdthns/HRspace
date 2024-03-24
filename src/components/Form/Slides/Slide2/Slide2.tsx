@@ -18,6 +18,7 @@ import Select from "react-select"
 import { Info } from "../../components/Info/Info"
 import styles from "./Slide2.module.css"
 import { Error } from "../../Error/Error"
+import image from "@public/slide2.svg"
 export function Slide2() {
   const {
     formState: { errors },
@@ -34,7 +35,7 @@ export function Slide2() {
   const programsOptions = getOptionsByArr(programs)
 
   return (
-    <FormLayout>
+    <FormLayout srcImage={image}>
       <h2>Описание вакансии</h2>
 
       <div className={styles["responsibilities"]}>

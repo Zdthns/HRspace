@@ -12,6 +12,7 @@ import RadioGroupStyle from "@components/RadioGroup/RadioGroup.module.css"
 import { Controller, useFormContext } from "react-hook-form"
 import { getOptionsByArr } from "../../../../utils/getOptionsByArr"
 import { Error } from "../../Error/Error"
+import image from "@public/slide3.svg"
 export function Slide3() {
   const {
     formState: { errors },
@@ -20,7 +21,7 @@ export function Slide3() {
   } = useFormContext<ZSlide3>()
 
   return (
-    <FormLayout>
+    <FormLayout srcImage={image}>
       <h2>Условия работы</h2>
       <div className={globalStyle["marginLeft"]}>
         <h3>График работы</h3>

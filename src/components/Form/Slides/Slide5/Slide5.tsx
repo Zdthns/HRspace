@@ -11,7 +11,7 @@ import { Controller, useFormContext } from "react-hook-form"
 import Select from "react-select"
 import { getOptionsByArr } from "../../../../utils/getOptionsByArr"
 import { Error } from "../../Error/Error"
-
+import image from "@public/slide5.svg"
 export function Slide5() {
   const {
     formState: { errors },
@@ -27,7 +27,7 @@ export function Slide5() {
 
   return (
     <>
-      <FormLayout>
+      <FormLayout srcImage={image}>
         <h2>Требования к рекрутерам</h2>
         <div className={globalStyle["marginLeft"]}>
           <div

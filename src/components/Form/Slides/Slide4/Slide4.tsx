@@ -39,7 +39,7 @@ export function Slide4() {
   } = useFormContext<ZSlide4>()
 
   return (
-    <FormLayout withPhoto={false}>
+    <FormLayout>
       <h2>Условия сотрудничества</h2>
       <div
         style={{
@@ -93,7 +93,7 @@ export function Slide4() {
         <img
           src={Arrow}
           alt="стрелка"
-          style={{ width: 82, height: 24, margin: "auto 25px" }}
+          style={{ width: 234, height: 113, margin: "auto 25px" }}
         />
         <div>
           <PicturePlaceholder />
