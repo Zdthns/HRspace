@@ -4,10 +4,10 @@ import styles from "./styles.module.css"
 import Button from "../../button/Button"
 import { openPopup } from "../../../../redux/slices/PopupModel/PopupModel"
 import Distributor from "../../Distributor/Distributor"
-import { setDataCall, setDataCallback, setDataSearch } from "../../props"
 import SearchCity from "../../popupForm/searchCity/SearchCity"
 import Callback from "../../popupForm/callback/callback"
 import Contacts from "../../popupForm/contacts/Contacts"
+import { useNavigate } from "react-router-dom"
 
 export type lendingCardTypes = {
   cardName?: string
@@ -18,16 +18,17 @@ export type lendingCardTypes = {
 }
 
 const Card = (lending: lendingCardTypes) => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch()
   const { isPopupOpen, isType } = useAppSelector(store => store.PopupModel)
 
   const handleClickButton = () => {
-    dispatch(openPopup(lending.buttonType))
+    if (lending.buttonType !== "add") {
+      dispatch(openPopup(lending.buttonType))
+    } else return navigate("/addForm")
   }
+  const addForm = () => {}
   const setData = (data: string) => {
-    if (data === "add") {
-      return
-    }
     if (data === "search") {
       return <SearchCity />
     }

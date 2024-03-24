@@ -1,7 +1,5 @@
-import React, { ChangeEventHandler, Children, ReactNode } from "react"
+import React, { ChangeEventHandler, ReactNode } from "react"
 import styles from "./styles.module.css"
-import Button from "../button/Button"
-import Form from "../Form/Form"
 import { IoClose } from "react-icons/io5"
 
 type propsType = {

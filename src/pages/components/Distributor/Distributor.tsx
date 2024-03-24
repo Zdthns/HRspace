@@ -1,7 +1,6 @@
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
-import { useEffect, useCallback } from "react"
+import { useEffect, useCallback, ReactNode } from "react"
 import { closePopup } from "../../../redux/slices/PopupModel/PopupModel"
-import type { TData } from "../../types/typesLending"
 import Popup from "../popup/Popup"
 import { OverlayPopup } from "../popup/overlay/OverlayPopap"
 import styles from "./styles.module.css"

@@ -17,11 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/form",
-    element: <DemoForm />,
-  },
-  {
-    path: "/popup",
-    element: <DemoPopup />,
+    element: <Form />,
   },
   {
     path: "/main",
