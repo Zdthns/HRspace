@@ -69,8 +69,8 @@ export function Slide1() {
             className={inputStyle["input-currency"]}
           />
         </div>
-        <Error message={errors.salaryRange?.salary_min?.message} />
-        <Error message={errors.salaryRange?.salary_max?.message} />
+        <Error message={errors.salaryRange?.salary_min ? errors.salaryRange?.salary_min?.message : " "} />
+        <Error message={errors.salaryRange?.salary_max ? errors.salaryRange?.salary_max?.message : " "} />
       </div>
     </FormLayout>
   )
