@@ -11,23 +11,6 @@ import clsx from "classnames"
 import { Controller, useFormContext } from "react-hook-form"
 import { Error } from "../../Error/Error"
 import { Info } from '../../components/Info/Info';
-const PicturePlaceholder = () => {
-  return (
-    <div
-      style={{
-        margin: "0 auto",
-        width: 306,
-        height: 111,
-        backgroundColor: "lightcoral",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      Иллюстрация?
-    </div>
-  )
-}
 
 export function Slide4() {
   const {
@@ -90,6 +73,7 @@ export function Slide4() {
             render={({ field }) => {
               return (
                 <CheckboxGroup
+                  selectedOptions={field.value}
                   options={getOptionsByArr(recruiterTasks)}
                   onChange={field.onChange}
                 />
@@ -128,9 +112,7 @@ export function Slide4() {
             style={{ width: 200 }}
             type="date"
             className={inputStyle["input-currency"]}
-            {...register("dates.desiredFirstResumeDate", {
-              setValueAs: v => new Date(v).getTime(),
-            })}
+            {...register("dates.desiredFirstResumeDate")}
           />
           <Error message={errors.dates?.desiredFirstResumeDate?.message} />
         </div>
@@ -140,9 +122,7 @@ export function Slide4() {
             className={inputStyle["input-currency"]}
             style={{ width: 200 }}
             type="date"
-            {...register("dates.desiredEmployeeExitDate", {
-              setValueAs: v => new Date(v).getTime(),
-            })}
+            {...register("dates.desiredEmployeeExitDate")}
           />
           <Info>
             За срочный поиск рекрутер может запросить более высокую цену.
