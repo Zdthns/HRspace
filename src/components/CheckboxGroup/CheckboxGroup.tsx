@@ -4,11 +4,12 @@ type Option<T> = { value: T; label: string }
 
 interface Props<T> {
   options: readonly Option<T>[]
+  selectedOptions: Array<T>
   onChange: (options: T[]) => void
 }
 
-export function CheckboxGroup<T>({ options, onChange }: Props<T>) {
-  const [selected, setSelected] = useState<T[]>([])
+export function CheckboxGroup<T>({ options, onChange, selectedOptions }: Props<T>) {
+  const [selected, setSelected] = useState(selectedOptions)
   useEffect(() => {
     onChange(selected)
   }, [onChange, selected])
