@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
   gap: 147px;
 }
 
@@ -38,6 +39,7 @@
 
 .company-info {
   display: flex;
+  justify-content: space-between;
   gap: 366.5px;
   align-items: center;
 }

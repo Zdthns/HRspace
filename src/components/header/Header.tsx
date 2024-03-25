@@ -9,7 +9,7 @@ import { Link, useLocation } from "react-router-dom"
 const links = [
   { name: "Главная", href: "/", current: true },
   { name: "Мои заявки", href: "/application" },
-  { name: "Поиск по рынку", href: "hh.ru/resumesearch" },
+  { name: "Поиск по рынку", href: "https://hh.ru/resumesearch" },
   { name: "Счёт", href: "https://youtu.be/p8z6UeHYQrA?si=IcLzO6aUiC28eWUu" },
   { name: "Помощь", href: "https://feedback.hh.ru/" },
 ]

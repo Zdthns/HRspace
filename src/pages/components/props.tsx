@@ -1,4 +1,15 @@
-import type { LendingCardType, TData } from "../types/typesLending"
+import avatar from "@/images/avatar/avatar.png"
+import avatar2 from "@/images/avatar/avatar2.png"
+import avatar3 from "@/images/avatar/avatar3.png"
+import avatar4 from "@/images/avatar/avatar4.png"
+import avatar5 from "@/images/avatar/avatar5.png"
+import avatar6 from "@/images/avatar/avatar6.png"
+
+import Image from "@/images/Image.png"
+import Image2 from "@/images/Image 2.png"
+import Image3 from "@/images/Image 3.png"
+
+import type { LendingCardType } from "../types/typesLending"
 export const heading = "Поиск рекрутеров по всей стране"
 
 export const recruiter = [
@@ -7,42 +18,42 @@ export const recruiter = [
     job: "Менеджер консультант",
     city: "Москва",
     rating: 5,
-    image: "src/images/avatar/avatar.png",
+    image: avatar,
   },
   {
     name: "Светлана Шабанова",
     job: "Кадровое агентство",
     city: "Уфа",
     rating: 5,
-    image: "src/images/avatar/avatar2.png",
+    image: avatar2,
   },
   {
     name: "Ольга Светикова",
     job: "Частный рекрутер",
     city: "Москва",
     rating: 5,
-    image: "src/images/avatar/avatar3.png",
+    image: avatar3,
   },
   {
     name: "Елена Володина",
     job: "Частный рекрутер",
     city: "Новосибирск",
     rating: 5,
-    image: "src/images/avatar/avatar4.png",
+    image: avatar4,
   },
   {
     name: "Артур Филатов",
     job: "Частный рекрутер",
     city: "Екатеринбург",
     rating: 5,
-    image: "src/images/avatar/avatar5.png",
+    image: avatar5,
   },
   {
     name: "Андрей Егоров",
     job: "Руководитель КА",
     city: "Санкт-Петербург",
     rating: 5,
-    image: "src/images/avatar/avatar6.png",
+    image: avatar6,
   },
 ]
 
@@ -53,14 +64,14 @@ export const lendingCards: LendingCardType[] = [
     captions:
       "Оформи заявку и сотни рекрутеров смогут предложить лучших кандидатов",
     buttonText: "Разместить заявку",
-    image: "src/images/Image.png",
+    image: Image,
   },
   {
     buttonType: "search",
     cardName: "Найти рекрутера",
     captions: "Сотни рекрутеров в твоем городе. Выбери лучших и закрой заявку.",
     buttonText: "Начать поиск рекрутеров",
-    image: "src/images/Image 2.png",
+    image: Image2,
   },
   {
     buttonType: "callback",
@@ -73,7 +84,7 @@ export const lendingCards: LendingCardType[] = [
       </>
     ),
     buttonText: "Заказать звонок",
-    image: "src/images/Image 3.png",
+    image: Image3,
   },
 ]
 

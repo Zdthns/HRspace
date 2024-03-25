@@ -1,5 +1,4 @@
 import "@/lib/zod/ru-zod"
-import DemoPopup from "@components/DemoPopup/DemoPopup"
 import { Form } from "@components/Form/Form"
 import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
@@ -8,14 +7,12 @@ import { Header } from "./components/header/Header"
 import "./index.css"
 import LandingPage from "./pages/Landing-page/LandingPage"
 import { store } from "./redux/store"
-import { Footer } from "./components/Footer/Footer"
 const container = document.getElementById("root")
 
 const Layout = () => (
   <>
     <Header />
     <Outlet /> {/* Все дочерние маршруты будут рендериться здесь */}
-    <Footer />
   </>
 )
 
@@ -27,10 +24,6 @@ const router = createBrowserRouter([
       {
         index: true, // подмаршрут корня
         element: <LandingPage />,
-      },
-      {
-        path: "popup",
-        element: <DemoPopup />,
       },
       {
         path: "application",
