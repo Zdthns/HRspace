@@ -15,13 +15,31 @@
 /* 3 */
 .radio-group__fieldset_workSchedule,
 .radio-group__fieldset_workFormat,
-.radio-group__fieldset_contractType,
 .radio-group__fieldset_socialPackage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.radio-group__fieldset_workSchedule > .radio-label,
+.radio-group__fieldset_workFormat > .radio-label,
+.radio-group__fieldset_contractType > .radio-label,
+.radio-group__fieldset_socialPackage > .radio-label {
+  padding: 16px 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+/* Способ оформления */
+.radio-group__fieldset_contractType {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-group__fieldset_contractType > :nth-child(3) {
+  grid-column: 1 / -1; /* третий элемент занимает всю строку */
 }
 
 /* 4 */
