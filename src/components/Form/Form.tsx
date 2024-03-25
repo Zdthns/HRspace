@@ -42,7 +42,7 @@ export function Form() {
     console.log(data)
   }
 
-  const [count, setCount] = useState(4)
+  const [count, setCount] = useState(1)
 
   const increment = async () => {
     const slide = `Slide${count}`

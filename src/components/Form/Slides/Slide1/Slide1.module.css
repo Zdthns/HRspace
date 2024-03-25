@@ -20,7 +20,7 @@
 .salary-range {
   grid-area: salary-range;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: min-content min-content;
   grid-template-rows: min-content min-content;
   column-gap: 24px;
 }

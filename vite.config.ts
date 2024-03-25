@@ -22,9 +22,6 @@ export default defineConfig({
     },
   },
   plugins: [react(), sassDts()],
-  server: {
-    open: true,
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -37,5 +34,12 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "src/setupTests",
     mockReset: true,
+  },
+  server: {
+    port: 3030,
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 5675,
   },
 })
