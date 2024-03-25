@@ -12,6 +12,7 @@ import RadioGroupStyle from "@components/RadioGroup/RadioGroup.module.css"
 import { Controller, useFormContext } from "react-hook-form"
 import { getOptionsByArr } from "../../../../utils/getOptionsByArr"
 import { Error } from "../../Error/Error"
+import image from "@public/slide3.svg"
 export function Slide3() {
   const {
     formState: { errors },
@@ -20,11 +21,19 @@ export function Slide3() {
   } = useFormContext<ZSlide3>()
 
   return (
-    <FormLayout>
+    <FormLayout srcImage={image}>
       <h2>Условия работы</h2>
-      <div className={globalStyle["marginLeft"]}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "196px 1fr",
+          columnGap: 24,
+          rowGap: 20,
+          alignItems: "baseline"
+        }}
+      >
         <h3>График работы</h3>
-        <div className={globalStyle["marginLeft"]}>
+        <div>
           <Controller
             name="workSchedule"
             control={control}
@@ -47,7 +56,7 @@ export function Slide3() {
         </div>
 
         <h3>Формат работы</h3>
-        <div className={globalStyle["marginLeft"]}>
+        <div>
           <Controller
             name="workFormat"
             control={control}
@@ -66,9 +75,8 @@ export function Slide3() {
           />
           <Error message={errors.workFormat?.message} />
         </div>
-
         <h3>Способ оформления</h3>
-        <div className={globalStyle["marginLeft"]}>
+        <div>
           <Controller
             name="contractType"
             control={control}
@@ -89,9 +97,8 @@ export function Slide3() {
           />
           <Error message={errors.contractType?.message} />
         </div>
-
-        <h3>Соц. пакет</h3>
-        <div className={globalStyle["marginLeft"]}>
+        <h3>Социальный пакет</h3>
+        <div>
           <Controller
             name="socialPackage"
             control={control}

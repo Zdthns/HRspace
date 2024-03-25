@@ -12,12 +12,12 @@ import { getOptionsByArr } from "@/utils/getOptionsByArr"
 import inputStyle from "@components/Input/Input.module.css"
 import { RadioGroup } from "@components/RadioGroup/RadioGroup"
 import RadioGroupStyle from "@components/RadioGroup/RadioGroup.module.css"
+import image from "@public/slide2.svg"
 import clsx from "classnames"
 import { Controller, useFormContext } from "react-hook-form"
 import Select from "react-select"
-import { Info } from "../../components/Info/Info"
-import styles from "./Slide2.module.css"
 import { Error } from "../../Error/Error"
+import { Info } from "../../components/Info/Info"
 export function Slide2() {
   const {
     formState: { errors },
@@ -34,10 +34,17 @@ export function Slide2() {
   const programsOptions = getOptionsByArr(programs)
 
   return (
-    <FormLayout>
+    <FormLayout srcImage={image}>
       <h2>Описание вакансии</h2>
 
-      <div className={styles["responsibilities"]}>
+      <div
+        style={{
+          display: "grid",
+          alignItems: "baseline",
+          gridTemplateColumns: "200px 1fr",
+          columnGap: 16,
+        }}
+      >
         <h3
           style={{
             marginTop: 13,
@@ -73,10 +80,19 @@ export function Slide2() {
           <Error message={errors.employeeResponsibilities?.message} />
         </div>
       </div>
-      <h3 style={{ marginTop: 28 }}>Требования к сотруднику</h3>
-      <div className={globalStyles["marginLeft"]}>
+      <h3 style={{ marginTop: 28 }}>Требования к сотруднику*</h3>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "160px 1fr",
+          alignItems: "baseline",
+          columnGap: 16,
+          rowGap: 20,
+          paddingLeft: 40,
+        }}
+      >
         <h3>Образование</h3>
-        <div className={globalStyles["marginLeft"]}>
+        <div>
           <Controller
             name="education"
             control={control}
@@ -97,7 +113,7 @@ export function Slide2() {
         </div>
 
         <h3>Стаж</h3>
-        <div className={globalStyles["marginLeft"]}>
+        <div>
           <div
             className={clsx(
               inputStyle["input-wrapper"],
@@ -116,7 +132,7 @@ export function Slide2() {
         </div>
 
         <h3>Гражданство</h3>
-        <div className={globalStyles["marginLeft"]}>
+        <div>
           <Controller
             name="citizenship"
             control={control}
@@ -136,7 +152,7 @@ export function Slide2() {
         </div>
 
         <h3>Владение программами</h3>
-        <div className={globalStyles["marginLeft"]}>
+        <div>
           <Controller
             name="softwareSkills"
             control={control}
@@ -162,27 +178,18 @@ export function Slide2() {
           />
           <Error message={errors.softwareSkills?.message} position="relative" />
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "max-content 1fr",
-            alignItems: "baseline",
-            columnGap: 20,
-          }}
-        >
-          <h3>Водительские права</h3>
-          <input
-            className={globalStyles["checkBox"]}
-            type="checkbox"
-            {...register("drivingLicense")}
-          />
-          <h3>Автомобиль</h3>
-          <input
-            className={globalStyles["checkBox"]}
-            type="checkbox"
-            {...register("carOwnership")}
-          />
-        </div>
+        <h3>Водительские права</h3>
+        <input
+          className={globalStyles["checkBox"]}
+          type="checkbox"
+          {...register("drivingLicense")}
+        />
+        <h3>Автомобиль</h3>
+        <input
+          className={globalStyles["checkBox"]}
+          type="checkbox"
+          {...register("carOwnership")}
+        />
       </div>
     </FormLayout>
   )

@@ -9,7 +9,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "./Slides"
-import { Header } from "@/components/header/Header"
 import { ProgressBar } from "../ProgressBar/ProgressBar"
 import styles from "./Form.module.css"
 import clsx from "classnames"
@@ -43,7 +42,7 @@ export function Form() {
     console.log(data)
   }
 
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState(4)
 
   const increment = async () => {
     const slide = `Slide${count}`
@@ -59,7 +58,6 @@ export function Form() {
 
   return (
     <div style={{ padding: "0 0 97px" }}>
-      <Header />
       <div
         style={{
           maxWidth: 1296,
@@ -68,8 +66,9 @@ export function Form() {
       >
         <p
           style={{
-            fontSize: 14,
-            height: 20,
+            fontSize: 12,
+            height: 13.8,
+            color: "var(--text-link)",
             margin: "32px 0 40px",
           }}
         >
@@ -77,8 +76,10 @@ export function Form() {
         </p>
         <h1
           style={{
-            margin: "0 0 39px",
-            fontSize: 24,
+            margin: "0 0 24px",
+            fontSize: 36,
+            fontWeight: 400,
+            fontFamily: "Proxima Nova Condensed",
           }}
         >
           Добавление заявки

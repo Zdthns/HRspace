@@ -1,8 +1,14 @@
+@import url("./public/fonts/fonts.css/");
+
+:root {
+  --primary-color: #71a2ff;
+  --text-link: #188bec;
+  --text-secondary: #60606080;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Arial Narrow", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

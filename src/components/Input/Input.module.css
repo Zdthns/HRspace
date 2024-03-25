@@ -30,9 +30,16 @@
   color: #959799;
 }
 
+.input-wrapper_end-ruble{
+  width: 184px;
+}
 .input-wrapper_end-ruble::after {
   content: "₽";
   color: #959799;
+}
+
+.input-wrapper_end-year {
+  width: 184px;
 }
 
 .input-wrapper_end-year::after {

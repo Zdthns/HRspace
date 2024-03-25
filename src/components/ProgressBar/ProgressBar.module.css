@@ -1,7 +1,7 @@
 .progress-container {
   margin: 0 auto;
-  width: calc(100% - 48px);
-  background-color: #dde1e6;
+  width: 100%;
+  background-color: #EFEFEF;
   height: 12px;
   border-radius: 4px;
   display: flex;
@@ -11,14 +11,12 @@
 
 .progress-bar {
   height: 8px;
-  background-color: #343a3f;
+  background-color: var(--primary-color);
   border-radius: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: width 0.5s ease-in-out;
 }
 
 .progress {
-  margin: 6px 0 0 24px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 8px 0 0;
   font-size: 18px;
 }

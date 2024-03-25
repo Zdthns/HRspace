@@ -23,12 +23,13 @@ export function CheckboxGroup<T>({ options, onChange }: Props<T>) {
   return (
     <fieldset
       style={{
-        marginTop: 12,
+        margin: 0,
         padding: 0,
         border: "none",
-        display: "flex",
-        flexDirection: "column",
-        rowGap: 8,
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        columnGap: 24,
+        rowGap: 12
       }}
     >
       {options.map(option => (
@@ -37,7 +38,7 @@ export function CheckboxGroup<T>({ options, onChange }: Props<T>) {
           style={{
             display: "flex",
             alignItems: "center",
-            columnGap: 30,
+            columnGap: 12,
           }}
         >
           <input

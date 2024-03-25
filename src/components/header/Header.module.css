@@ -1,0 +1,114 @@
+.header {
+  background: linear-gradient(90deg, #E4FFDD 0%, #CEDFFF 100%);
+  padding: 16px 96px;
+  block-size: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logo-title {
+  inline-size: 80px;
+  block-size: 21px;
+}
+
+.logo {
+  inline-size: 46px;
+  block-size: 46px;
+}
+
+.navigation {
+  max-inline-size: 462px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  /* padding-inline: 5px; */
+  margin-inline: 5px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #303233;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primary-color); /* Изменить цвет при наведении */
+  transition: color 0.6s ease; /* Анимация только для цвета */
+}
+
+.link-current {
+  font-weight: 700;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button-bell {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.bell {
+  inline-size: 30px;
+  block-size: 30px;
+  margin-inline-end: 4px;
+} 
+
+.user-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(-10deg, #3f43c8 0%, #5f90fafa 100%);
+  border-radius: 50%;
+  color: #c7d0f6;
+  font-weight: 600;
+  user-select: none;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.user-id {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  color: #959799;
+}
