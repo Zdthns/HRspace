@@ -22,12 +22,12 @@
 
 .input-wrapper_start-from::before {
   content: "от";
-  color: #959799;
+  color: var(--text-secondary);
 }
 
 .input-wrapper_start-to::before {
   content: "до";
-  color: #959799;
+  color: var(--text-secondary);
 }
 
 .input-wrapper_end-ruble{
@@ -35,7 +35,7 @@
 }
 .input-wrapper_end-ruble::after {
   content: "₽";
-  color: #959799;
+  color: var(--text-secondary);
 }
 
 .input-wrapper_end-year {
@@ -43,13 +43,18 @@
 }
 
 .input-wrapper_end-year::after {
-  color: #959799;
+  color: var(--text-secondary);
   content: "лет";
 }
 
 .input-currency {
   padding: 11px 40px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--base-3);
   border-radius: 8px;
   width: 100%;
 }
+
+.input-currency::placeholder {
+  color: var(--text-secondary)
+}
+

@@ -1,6 +1,5 @@
 import styles from "./FormLayout.module.css"
 import clsx from "classnames"
-import "./react-select.css"
 type FormLayoutProps = {
   children: React.ReactNode
   layoutClass?: string

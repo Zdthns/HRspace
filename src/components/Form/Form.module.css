@@ -9,17 +9,19 @@
   padding: 10px 12px;
   height: 40px;
   border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .button--next,
 .button--submit {
   color: white;
-  background-color: #7e92a3;
+  background-color: var(--primary-color);
 }
 
 .button--back {
-  background-color: #bebfbf;
-  color: white;
+  background-color: #E1E8FD;
+  color: var(--primary-additional-color);
 }
 
 .button--save {

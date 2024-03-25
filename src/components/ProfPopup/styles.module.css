@@ -20,41 +20,32 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)
 }
 
-.card > h2,
-h3 {
+.card legend {
+  padding: 0 0 15px;
   font-family: "Proxima Nova Condensed";
   margin: 0;
   color: #303233;
+  font-size: 28px;
 }
 
-.card-input {
-  margin: 12px 0 15px;
-  width: 100%;
-  height: 48px;
-  padding: 10px 16px;
-  gap: 8px;
-  border: 1px solid #d9e0f0;
-  border-radius: 8px;
-}
-
-.wrapper {
-  margin: 15px 0 0;
+.fieldset {
   padding: 0;
-  list-style: none;
+  margin: 0;
+  border: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 10px;
-  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 7px;
 }
 
-.breadcrumbs, .breadcrumbs > span {
-  padding: 15px 0;
-  cursor: default;
-  text-decoration: none;
-  color: var(--main-text);
+.fieldset input{
+  display: none;
 }
 
-.breadcrumbs span:hover {
-  cursor: pointer;
+.fieldset label {
+  display: block;
+  padding: 3px 0 ;
+}
+.fieldset label:hover{
   color: var(--primary-color);
+  cursor: pointer;
 }

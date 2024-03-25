@@ -9,8 +9,8 @@ const profSchema = z.object({
 
 const salaryRangeSchema = z
   .object({
-    salary_min: z.number(),
-    salary_max: z.number(),
+    salary_min: z.number().min(19242, {message: "Не меньше чем МРОТ"}).max(2147483647),
+    salary_max: z.number().positive().max(2147483647),
   })
   .refine(data => data.salary_min < data.salary_max, {
     message: "Минимальная зарплата должна быть меньше максимальной",

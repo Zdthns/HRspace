@@ -42,13 +42,13 @@ export function RadioGroup<T>({
             styles["radio-label"],
             option["value"] === changedValue && styles["radio-label--checked"],
           )}
-          key={option.label}
-          htmlFor={option.label}
+          key={option.label + nameGroup}
+          htmlFor={option.label + nameGroup}
         >
           <input
             className={styles["radio-input"]}
             type="radio"
-            id={option.label}
+            id={option.label + nameGroup}
             name={nameGroup}
             checked={option.value === changedValue}
             onChange={() => onChange(option.value)}

@@ -1,12 +1,16 @@
 import { paymentType, resumeFormat } from "@/mock/jsons"
 import { z } from "zod"
 
+const today = new Date();
+today.setDate(today.getDate() + 1); // Добавляем один день к текущей дате
+const tomorrow = today.toISOString().substring(0, 10);
+
 const slide4DateSchema = z
   .object({
     desiredFirstResumeDate: z
-      .number()
-      .refine(date => date > Date.now(), "Не раньше завтрашнего дня"),
-    desiredEmployeeExitDate: z.number(),
+      .string()
+      .refine(date => date > tomorrow, "Не раньше завтрашнего дня"),
+    desiredEmployeeExitDate: z.string(),
   })
   .refine(data => data.desiredFirstResumeDate < data.desiredEmployeeExitDate, {
     message:

@@ -7,8 +7,32 @@
 }
 
 .checkBox {
+  border-radius: 2px;
+  appearance: none; 
   min-width: 20px;
   margin: 0;
   width: 20px;
   aspect-ratio: 1;
+  border: 1px solid #D9E0F0;
+  position: relative; 
+}
+
+.checkBox::before {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./public/checkbox.svg'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  opacity: 0; 
+  transition: opacity 0.2s; 
+}
+
+.checkBox:checked::before {
+  background-color: var(--primary-color);
+  opacity: 1; 
 }

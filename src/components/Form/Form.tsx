@@ -90,12 +90,6 @@ export function Form() {
             onSubmit={methods.handleSubmit(onSubmit)}
             onKeyDown={e => e.key === "Enter" && e.preventDefault()}
           >
-            {/* <button>submit</button> */}
-            {/* <Slide1 />
-            <Slide2 />
-            <Slide3 />
-            <Slide4 />
-            <Slide5 /> */}
             {
               [<Slide1 />, <Slide2 />, <Slide3 />, <Slide4 />, <Slide5 />][
                 count - 1
