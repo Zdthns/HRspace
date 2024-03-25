@@ -1,3 +1,51 @@
-.wrapper {
-  border: 1px solid red;
+.popup {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.card {
+  padding: 24px 20px;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-width: 80dvw;
+  max-height: 90dvh;
+  overflow-y: scroll;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)
+}
+
+.card legend {
+  padding: 0 0 15px;
+  font-family: "Proxima Nova Condensed";
+  margin: 0;
+  color: #303233;
+  font-size: 28px;
+}
+
+.fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 7px;
+}
+
+.fieldset input{
+  display: none;
+}
+
+.fieldset label {
+  display: block;
+  padding: 3px 0 ;
+}
+.fieldset label:hover{
+  color: var(--primary-color);
+  cursor: pointer;
 }
