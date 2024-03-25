@@ -1,10 +1,7 @@
 import { z } from "zod"
 
 export const slide5Schema = z.object({
-  experienceYears: z
-    .number()
-    .min(0, { message: "Опыт работы не может быть отрицательным" })
-    .int("Опыт работы должен быть указан целым числом"),
+  experienceYears: z.number().min(0).int().max(2147483647),
 
   specialSkills: z.array(z.string()),
   additionalTasks: z.array(z.string()),

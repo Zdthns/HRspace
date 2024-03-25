@@ -13,9 +13,9 @@ i18next.init({
 
 const myErrorMap: ZodErrorMap = (issue, ctx) => {
   // Использование кастомных сообщений
-  if (issue.code === "invalid_type") {
-    return { message: "Обязательное поле" }
-  }
+  // if (issue.code === "invalid_type") {
+  //   return { message: "Обязательное поле" }
+  // }
   // Возвращение стандартной карты ошибок для всех остальных случаев
   return zodI18nMap(issue, ctx)
 }
