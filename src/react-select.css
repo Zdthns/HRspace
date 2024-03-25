@@ -1,0 +1,14 @@
+.react-select-container {
+  padding: 5px 0;
+  border-radius: 8px;
+}
+.react-select__control {
+  padding: 5px 0;
+  border-radius: 8px;
+  border: 1px solid var(--base-3) !important; 
+}
+
+.react-select__placeholder {
+  color: var(--base-3) !important;
+}
+

@@ -1,9 +1,12 @@
 @import url("./public/fonts/fonts.css/");
+@import url("./react-select.css");
 
 :root {
   --primary-color: #71a2ff;
+  --primary-additional-color: #71a2ff;
   --text-link: #188bec;
   --text-secondary: #60606080;
+  --base-3: #D9E0F0;
 }
 
 body {
