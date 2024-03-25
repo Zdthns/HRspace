@@ -4,36 +4,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(2px);
 }
 
 .card {
+  padding: 24px 20px;
   width: 60%;
   height: 60%;
-  padding: 20px;
-  background-color: #EFEFEF;
+  background-color: white;
   box-sizing: border-box;
   border-radius: 8px;
   max-width: 80dvw;
   max-height: 90dvh;
-  overflow-y:scroll;
-  color: #188BEC;
+  overflow-y: scroll;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)
 }
 
-.card> h2,h3{
-color:  #303233;
+.card > h2,
+h3 {
+  font-family: "Proxima Nova Condensed";
+  margin: 0;
+  color: #303233;
 }
+
 .card-input {
-  margin: 12px 0 0;
+  margin: 12px 0 15px;
   width: 100%;
   height: 48px;
   padding: 10px 16px;
   gap: 8px;
   border: 1px solid #d9e0f0;
   border-radius: 8px;
-
 }
- .wrapper {
+
+.wrapper {
+  margin: 15px 0 0;
+  padding: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
   grid-auto-flow: dense;
- }
+}
+
+.breadcrumbs, .breadcrumbs > span {
+  padding: 15px 0;
+  cursor: default;
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+.breadcrumbs span:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}

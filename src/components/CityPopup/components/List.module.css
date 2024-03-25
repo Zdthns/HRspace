@@ -1,16 +1,23 @@
 .header {
+  margin: 0 0 7px;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 16px;
 }
 
-.list {
-  /*width: 162px;
-  padding-right: 32px;*/
+.ul {
+  padding: 0;
   display: flex;
-  /*gap: 8px;*/
+  flex-direction: column;
+  gap: 10px;
+}
+
+.li {
+  display: flex;
   font-size: 14px;
   line-height: 16px;
   width: fit-content;
-
+  color: var(--text-link)
+}
+.li:hover {
+  color: var(--primary-color)
 }

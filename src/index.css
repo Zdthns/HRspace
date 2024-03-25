@@ -7,11 +7,13 @@
   --text-link: #188bec;
   --text-secondary: #60606080;
   --base-3: #D9E0F0;
+  --main-text: #303233;
 }
 
 body {
   margin: 0;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  color: var(--main-text);
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -39,30 +39,28 @@ export default function CityPopup({ showPopup, onChange }: TCityPopup) {
     <PopupPortal isOpen={showPopup}>
       <div className={styles["popup"]}>
         <div className={styles["card"]}>
-          <h2>Укажите профессию</h2>
+          <h2>Укажите город</h2>
           <input
             type="text"
             className={styles["card-input"]}
             onChange={e => setSearch(e.target.value)}
             value={search}
+            disabled
           />
-          <h3>Россия / Регион</h3>
+          <span className={styles["breadcrumbs"]}>
+            <span onClick={() => setRegion(undefined)}>Россия</span>
+            {region ? ` / ${region.name}` : ""}
+          </span>
           {regions && !region && (
-            <div
-              className={styles.wrapper}
-              //style={{
-              //  display: "flex",
-              //  flexWrap: "wrap",
-              //  flexDirection: "column",
-              //  maxHeight: "100%",
-              //  // width: "100%",
-              //  overflow: "auto",
-              //}}
-            >
+            <ul className={styles.wrapper}>
               <List items={regions} setItem={setRegion} />
-            </div>
+            </ul>
           )}
-          {region && <List items={region.areas} setItem={setCity} />}
+          {region && (
+            <ul className={styles.wrapper}>
+              <List items={region.areas} setItem={setCity} />{" "}
+            </ul>
+          )}
         </div>
       </div>
     </PopupPortal>
