@@ -1,13 +1,16 @@
 .button{
-  width: 100%;
+  margin-top: 10px ;
+  width: 256px;
   border-radius: 8px;
   padding: 10px 12px;
   color: white;
-  background-color: #7E92A3;
+  background-color: #71A2FF;
   border-color: transparent;
   cursor: pointer;
 }
-
+.button:hover,
 .button:active {
-  background-color: #C6D2DC;
+  background-color: #E1E8FD;
+color: #4B86F6;
+;
 }

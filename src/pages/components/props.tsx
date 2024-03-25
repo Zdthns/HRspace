@@ -59,14 +59,14 @@ export const lendingCards: LendingCardType[] = [
     captions:
       "Оформи заявку и сотни рекрутеров смогут предложить лучших кандидатов",
     buttonText: "Разместить заявку",
-    image: "https://s1.1zoom.ru/big3/111/348270-admin.jpg",
+    image: "src/images/Image.png",
   },
   {
     buttonType: "search",
     cardName: "Найти рекрутера",
     captions: "Сотни рекрутеров в твоем городе. Выбери лучших и закрой заявку.",
     buttonText: "Начать поиск рекрутеров",
-    image: "https://s1.1zoom.ru/big3/111/348270-admin.jpg",
+    image: "src/images/Image 2.png",
   },
   {
     buttonType: "callback",
@@ -79,7 +79,7 @@ export const lendingCards: LendingCardType[] = [
       </>
     ),
     buttonText: "Заказать звонок",
-    image: "https://s1.1zoom.ru/big3/111/348270-admin.jpg",
+    image: "src/images/Image 3.png",
   },
 ]
 

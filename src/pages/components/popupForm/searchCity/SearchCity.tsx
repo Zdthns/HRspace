@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react"
-import styles from "../styles.module.css"
+import styles from "./styles.module.css"
 import CreatableSelect from "react-select/creatable"
 import { citiesOfRussia } from "./lib/city"
 import Select from "react-select"
+import Button from "../../button/Button"
 
 const options = citiesOfRussia
 
@@ -19,14 +20,16 @@ const SearchCity = () => {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <h1 className={styles.heading}>Укажите город</h1>
       <Select
+        className={styles.select}
         placeholder={"введите город для поиска"}
         onChange={onChange}
         options={options}
         value={getValue()}
       />
+      <Button buttonText={"Найти"} />
     </div>
   )
 }

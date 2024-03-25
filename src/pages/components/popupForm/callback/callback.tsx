@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styles.module.css"
+import styles from "./styles.module.css"
 import { SubmitHandler, useForm } from "react-hook-form"
 import Button from "../../button/Button"
 
@@ -27,6 +27,7 @@ const callback = () => {
       <h1 className={styles.heading}>Обратный звонок</h1>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <input
+          placeholder="Ваше имя"
           className={styles.input}
           {...register("name", {
             required: "Это поле не может быть пустым!",
@@ -45,7 +46,7 @@ const callback = () => {
           <div className={styles.errorMessage}>
             {errors.name.message || "error"}
           </div>
-        )}
+        )}{" "}
         <input
           className={styles.input}
           type="tel"

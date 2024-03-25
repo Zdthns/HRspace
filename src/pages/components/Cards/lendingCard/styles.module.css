@@ -6,8 +6,8 @@
   justify-content: space-between;
 }
 span {
-  color: blue;
-  text-decoration: dashed;
+  color: #188BEC;
+  text-decoration:underline;
   cursor: pointer;
 }
 .image_wrapper {
@@ -15,13 +15,12 @@ span {
   display: flex;
   align-items:center;
   justify-content: center;
-  z-index: 10;
 }
 
 .image {
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 120px;
   border-radius: 50%;
 }
 
