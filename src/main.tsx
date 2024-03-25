@@ -8,7 +8,7 @@ import { Header } from "./components/Header/Header"
 import "./index.css"
 import LandingPage from "./pages/Landing-page/LandingPage"
 import { store } from "./redux/store"
-import {Footer} from "./components/Footer/Footer"
+import { Footer } from "./components/Footer/Footer"
 const container = document.getElementById("root")
 
 const Layout = () => (

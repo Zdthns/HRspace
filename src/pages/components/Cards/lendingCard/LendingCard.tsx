@@ -25,7 +25,7 @@ const Card = (lending: lendingCardTypes) => {
   const handleClickButton = () => {
     if (lending.buttonType !== "add") {
       dispatch(openPopup(lending.buttonType))
-    } else return navigate("/form")
+    } else return navigate("/application")
   }
 
   const setData = (data: string) => {
