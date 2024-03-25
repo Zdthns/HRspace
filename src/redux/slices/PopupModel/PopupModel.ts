@@ -1,29 +1,26 @@
-import { createAppSlice } from "@/redux/createAppSlice";
+import { createAppSlice } from "@/redux/createAppSlice"
 
 type TInitialStatePopup = {
-  isPopupOpen: boolean,
-  isType: "add" | "search" | "callback" | 'call' | ''
+  isPopupOpen: boolean
+  isType: "add" | "search" | "callback" | "call" | ""
 }
 export const InitialStatePopup: TInitialStatePopup = {
   isPopupOpen: false,
-  isType: ''
+  isType: "",
 }
 
 export const popupModelSlice = createAppSlice({
-  name: 'create-request',
+  name: "create-request",
   initialState: InitialStatePopup,
   reducers: {
     openPopup(state, action) {
-      state.isPopupOpen = true;
+      state.isPopupOpen = true
       state.isType = action.payload
     },
     closePopup(state) {
-      state.isPopupOpen = false;
-    }
-  }
+      state.isPopupOpen = false
+    },
+  },
 })
 
-export const {
-  openPopup,
-  closePopup,
-} = popupModelSlice.actions;
+export const { openPopup, closePopup } = popupModelSlice.actions

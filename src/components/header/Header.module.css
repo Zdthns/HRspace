@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(90deg, #E4FFDD 0%, #CEDFFF 100%);
+  background: linear-gradient(90deg, #e4ffdd 0%, #cedfff 100%);
   padding: 16px 96px;
   block-size: 78px;
   display: flex;
@@ -50,7 +50,9 @@
   font-weight: 400;
   line-height: 24px;
   color: #303233;
-  transition: color 0.3s ease, font-weight 0.3s ease;
+  transition:
+    color 0.3s ease,
+    font-weight 0.3s ease;
 }
 
 .link:hover {
@@ -78,7 +80,7 @@
   inline-size: 30px;
   block-size: 30px;
   margin-inline-end: 4px;
-} 
+}
 
 .user-avatar {
   display: inline-flex;

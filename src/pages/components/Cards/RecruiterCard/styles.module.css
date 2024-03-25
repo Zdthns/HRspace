@@ -1,11 +1,11 @@
-.wrapper_caption{
-padding-left: 10px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+.wrapper_caption {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.card{
+.card {
   margin: 20px;
   display: flex;
   width: 300px;
@@ -14,7 +14,6 @@ align-items: flex-start;
   border: 1px solid gray;
   padding: 10px;
 }
-
 
 .image_small {
   vertical-align: middle;
@@ -27,27 +26,26 @@ align-items: flex-start;
   width: 50px;
   height: 50px;
 }
-.caption{
+.caption {
   text-align: center;
   padding: 5px;
   color: #959799;
 }
 
-.caption>span{
+.caption > span {
   color: #303233;
-
 }
 
-.rating{
+.rating {
   display: flex;
   align-items: center;
-  }
-  .image_wrapper {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-  }
+}
+.image_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .city{
-    margin-left: 15px;
-  }
+.city {
+  margin-left: 15px;
+}

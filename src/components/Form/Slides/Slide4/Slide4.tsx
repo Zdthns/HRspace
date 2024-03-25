@@ -10,7 +10,7 @@ import Arrow from "@public/arrow.svg"
 import clsx from "classnames"
 import { Controller, useFormContext } from "react-hook-form"
 import { Error } from "../../Error/Error"
-import { Info } from '../../components/Info/Info';
+import { Info } from "../../components/Info/Info"
 
 export function Slide4() {
   const {
@@ -158,7 +158,7 @@ export function Slide4() {
             </div>
             <p>/за одного сотрудника</p>
           </div>
-            <Info>Это средняя сумма по рынку для этой специальности  </Info>
+          <Info>Это средняя сумма по рынку для этой специальности </Info>
           <Error message={errors.employeeReward?.message} position="relative" />
 
           <ul
@@ -169,7 +169,7 @@ export function Slide4() {
               padding: "0 0 0 4px",
               fontSize: 14,
               lineHeight: "1.4",
-              gap: 12
+              gap: 12,
             }}
           >
             <li>

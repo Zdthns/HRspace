@@ -16,8 +16,8 @@
   font-size: 14px;
   line-height: 16px;
   width: fit-content;
-  color: var(--text-link)
+  color: var(--text-link);
 }
 .li:hover {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }

@@ -8,7 +8,11 @@ interface Props<T> {
   onChange: (options: T[]) => void
 }
 
-export function CheckboxGroup<T>({ options, onChange, selectedOptions }: Props<T>) {
+export function CheckboxGroup<T>({
+  options,
+  onChange,
+  selectedOptions,
+}: Props<T>) {
   const [selected, setSelected] = useState(selectedOptions)
   useEffect(() => {
     onChange(selected)
@@ -30,7 +34,7 @@ export function CheckboxGroup<T>({ options, onChange, selectedOptions }: Props<T
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         columnGap: 24,
-        rowGap: 12
+        rowGap: 12,
       }}
     >
       {options.map(option => (

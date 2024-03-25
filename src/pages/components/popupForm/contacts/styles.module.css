@@ -1,5 +1,5 @@
 .heading {
-  color:  #303233;
+  color: #303233;
   font-size: 14px;
   font-weight: 400;
   line-height: 16.1px;
@@ -7,7 +7,7 @@
 .input {
   width: 306px;
   padding: 10px 16px;
-  border: 1px solid  #D9E0F0;
+  border: 1px solid #d9e0f0;
 }
 .wrapper {
   margin: 0 auto;

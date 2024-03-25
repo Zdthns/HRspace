@@ -6,14 +6,14 @@
   justify-content: space-between;
 }
 span {
-  color: #188BEC;
-  text-decoration:underline;
+  color: #188bec;
+  text-decoration: underline;
   cursor: pointer;
 }
 .image_wrapper {
   padding: 10px;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -24,21 +24,21 @@ span {
   border-radius: 50%;
 }
 
-.caption{
+.caption {
   padding: 10px;
   text-align: center;
-font-size: 14px;
-font-weight: 400;
-line-height: 19.6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
 }
 
 .heading {
   color: #303233;
-  font-family:  Arial;
-  font-weight:  700 ;
+  font-family: Arial;
+  font-weight: 700;
   font-size: 24px;
-  line-height:27.84px;
+  line-height: 27.84px;
 }
-.button{
+.button {
   width: 100%;
 }

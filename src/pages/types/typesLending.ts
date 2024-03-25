@@ -16,12 +16,12 @@ export type TData = {
 
 export type TdataSetInput = {
   name: string
-  value?: string,
+  value?: string
   minLength?: string
   maxLength?: string
   label?: string
   placeholder?: string
-  type: 'text' | 'tel'
+  type: "text" | "tel"
 }
 export type TForm = {
   [name: string]: string | undefined
@@ -37,5 +37,4 @@ export interface IFieldSet {
   name?: string
   phone?: number
   city?: string
-
 }

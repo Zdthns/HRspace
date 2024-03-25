@@ -39,12 +39,12 @@ export const List = <T extends ListItem>({
       {Object.entries(groupedItems).map(([firstLetter, items]) => (
         <li key={firstLetter}>
           <h3 className={styles["header"]}>{firstLetter}</h3>
-          <ul className={styles['ul']}>
+          <ul className={styles["ul"]}>
             {items.map(item => (
               <li
-              style={{
-                cursor: "pointer"
-              }}
+                style={{
+                  cursor: "pointer",
+                }}
                 className={styles["li"]}
                 key={item.id}
                 onClick={() => setItem(item)}

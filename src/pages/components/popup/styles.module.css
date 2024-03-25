@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  background-color: #EDEAEA;
+  background-color: #edeaea;
   width: 426px;
   height: 316px;
   padding: 10px;
@@ -15,5 +15,3 @@
   top: 10px;
   right: 5px;
 }
-
-

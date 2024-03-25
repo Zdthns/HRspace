@@ -1,18 +1,18 @@
-.heading{
+.heading {
   margin-bottom: 20px;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px;
-  color:  #303233;
-  }
-  .wrapper {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .select {
-width: 306px;
-margin-bottom: 20px;
-  }
+  color: #303233;
+}
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.select {
+  width: 306px;
+  margin-bottom: 20px;
+}

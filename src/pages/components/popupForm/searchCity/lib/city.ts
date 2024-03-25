@@ -15,5 +15,4 @@ export const citiesOfRussia: { value: string; label: string }[] = [
   { value: "perm", label: "Пермь" },
   { value: "volgograd", label: "Волгоград" },
   // Добавьте остальные города по аналогии
-];
-
+]

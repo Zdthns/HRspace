@@ -11,9 +11,8 @@ type TProfPopup = {
 export function ProfPopup({ showPopup, onChange }: TProfPopup) {
   return (
     <PopupPortal isOpen={showPopup}>
-      
       <div className={styles["popup"]}>
-        <div className={styles['card']}>
+        <div className={styles["card"]}>
           <fieldset
             className={styles["fieldset"]}
             onChange={(event: React.FormEvent<HTMLFieldSetElement>) => {

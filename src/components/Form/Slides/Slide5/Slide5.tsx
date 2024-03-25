@@ -34,7 +34,7 @@ export function Slide5() {
           gridTemplateColumns: "196px 1fr",
           columnGap: 24,
           rowGap: 32,
-          alignItems: "baseline"
+          alignItems: "baseline",
         }}
       >
         <h3>Опыт</h3>
@@ -177,9 +177,21 @@ export function Slide5() {
           <Error message={errors.recruiterCount?.message} />
         </div>
       </div>
-      <label style={{margin : "40px 0 0", display: "flex", gap: 12, alignItems: "center"}}>
-        <input type="checkbox" {...register("acceptOffer")} className={globalStyle['checkBox']} />Я принимаю условия
-        “Оферты на заключение договора об использовании веб-сервиса HRspace“
+      <label
+        style={{
+          margin: "40px 0 0",
+          display: "flex",
+          gap: 12,
+          alignItems: "center",
+        }}
+      >
+        <input
+          type="checkbox"
+          {...register("acceptOffer")}
+          className={globalStyle["checkBox"]}
+        />
+        Я принимаю условия “Оферты на заключение договора об использовании
+        веб-сервиса HRspace“
         <Error message={errors.acceptOffer?.message} />
       </label>
     </FormLayout>

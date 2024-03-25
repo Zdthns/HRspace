@@ -30,7 +30,7 @@
   color: var(--text-secondary);
 }
 
-.input-wrapper_end-ruble{
+.input-wrapper_end-ruble {
   width: 184px;
 }
 .input-wrapper_end-ruble::after {
@@ -55,6 +55,5 @@
 }
 
 .input-currency::placeholder {
-  color: var(--text-secondary)
+  color: var(--text-secondary);
 }
-

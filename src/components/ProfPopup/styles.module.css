@@ -17,7 +17,9 @@
   max-width: 80dvw;
   max-height: 90dvh;
   overflow-y: scroll;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.1),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card legend {
@@ -37,15 +39,15 @@
   column-gap: 7px;
 }
 
-.fieldset input{
+.fieldset input {
   display: none;
 }
 
 .fieldset label {
   display: block;
-  padding: 3px 0 ;
+  padding: 3px 0;
 }
-.fieldset label:hover{
+.fieldset label:hover {
   color: var(--primary-color);
   cursor: pointer;
 }

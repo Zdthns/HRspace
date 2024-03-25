@@ -29,7 +29,7 @@ export function Slide3() {
           gridTemplateColumns: "196px 1fr",
           columnGap: 24,
           rowGap: 20,
-          alignItems: "baseline"
+          alignItems: "baseline",
         }}
       >
         <h3>График работы</h3>

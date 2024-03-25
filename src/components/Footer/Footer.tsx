@@ -8,18 +8,24 @@ import okIcon from "@public/ok-icon.svg"
 export function Footer() {
   return (
     <footer className={styles.footer}>
- <ul className={styles.list}>
+      <ul className={styles.list}>
         <li className={styles.item}>
           <span className={styles.region}>Москва и область</span>
-          <a href="tel:+74959746427" className={styles.number}>+7 495 974-64-27</a>
+          <a href="tel:+74959746427" className={styles.number}>
+            +7 495 974-64-27
+          </a>
         </li>
         <li className={styles.item}>
           <span className={styles.region}>Санкт-Петербург и область</span>
-          <a href="tel:+78124584545" className={styles.number}>+7 812 458-45-45</a>
+          <a href="tel:+78124584545" className={styles.number}>
+            +7 812 458-45-45
+          </a>
         </li>
         <li className={styles.item}>
           <span className={styles.region}>Регионы</span>
-          <a href="tel:88001006427" className={styles.number}>8 800 100-64-27</a>
+          <a href="tel:88001006427" className={styles.number}>
+            8 800 100-64-27
+          </a>
         </li>
         <li className={styles.item}>
           <span className={styles.region}>hrspace@hh.ru</span>

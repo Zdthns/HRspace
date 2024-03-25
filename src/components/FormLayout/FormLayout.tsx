@@ -18,7 +18,13 @@ export function FormLayout({
         srcImage && styles["form-layout__with-photo"],
       )}
     >
-      {srcImage && <img src={srcImage} alt="кОртинка" className={styles["form-layout__image"]} />}
+      {srcImage && (
+        <img
+          src={srcImage}
+          alt="кОртинка"
+          className={styles["form-layout__image"]}
+        />
+      )}
       <div className={clsx(styles["form-layout__form"], layoutClass)}>
         {children}
       </div>

@@ -8,7 +8,7 @@
   padding: 0;
   text-decoration: underline;
   cursor: pointer;
-  color: var(--text-link)
+  color: var(--text-link);
 }
 
 .select-button--selected {
