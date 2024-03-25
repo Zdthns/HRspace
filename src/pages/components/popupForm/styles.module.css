@@ -19,12 +19,14 @@ label {
   display: block;
 }
 
+/* Данный код модифицирует все формы приложения
+напиши по-другому, чтобы код использовался внутри нужных компонентов
 form {
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
-}
+} */
 .heading{
   margin-top: 20px;
   font-size: 16px;
