@@ -1,27 +1,63 @@
-# vite-template-redux
+# Проект "Frontend-разработчик в команду сообществ"
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+## Описание проекта
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+Этот проект представляет собой React приложение, созданное в рамках хакатона Хакатон HRSpace. Приложение формирует состояние сложной формы с промежуточной валидацией на каждом этапе её заполнения. В итоге формируется объект, который служит для сохранения заявки. Также форма может быть легко использовала для редактирования уже существующих заявок по средствам установки состояния по-умолчанию при инициализации. 
+
+## Технологии
+
+- **React**: Используется для создания пользовательского интерфейса.
+- **TypeScript**: Для статической типизации и улучшения читаемости кода.
+- **Redux**: Для управления состоянием приложения.
+- **react-hook-form**: Для удобного управления состоянием формы.
+- **Mock Service Worker (MSW)**: Для имитации ответа от backend в процессе разработки.
+- **Zod**: Для валидации полей формы и получаемых данных от сервера.
+- **zod-i18n-map**: Для перевода сообщений об ошибках по умолчанию.
+- **CSS Modules**: Для изоляции стилей компонентов.
+- **Docker**: Для упаковки приложения в контейнер для упрощения развертывания.
+
+## Приложение
+![скриншот главной страницы](https://sun9-65.userapi.com/impg/e-RJ8AckMIRZfEhcgNDwgQ1Y5QUTg23v7LlmlA/qr6BQdYCSGg.jpg?size=1706x912&quality=96&sign=6763318dc309bc7ab4e0beff3174d6e9&type=album)
+
+![cкриншот первого слайда формы](https://sun62-2.userapi.com/impg/JAVnl60hGUaX25qQ8Lso13TVXuHylvAHsp8l2Q/BQ5231ahHC0.jpg?size=1707x774&quality=96&sign=9fa9d702bf281bc16a1a732549a78dbc&type=album)
+
+## Ознакомиться онлайн: http://90.189.119.215:8888
+
+## Развернуть Docker контейнер
+### Клонирование репозитория
+
+```bash 
+git clone https://github.com/Zdthns/HRspace
 ```
 
-## Goals
+### Старт скрипта
+```bash 
+sh ./build_and_run.sh
+```
+Этот скрипт автоматизирует процесс сборки и запуска приложения в Docker контейнере.
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+## Установка и запуск
 
-## Scripts
+### Клонирование репозитория
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
+```bash 
+git clone https://github.com/Zdthns/HRspace
+```
 
-## Inspiration
+### Установка зависимостей
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+```bash
+npm ci
+```
+
+### Сборка проекта
+
+```bash
+npm run build
+```
+
+### Запуск проекта
+
+```bash
+npm run preview
+```
