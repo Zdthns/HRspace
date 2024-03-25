@@ -5,10 +5,12 @@
 }
 
 .list {
-  width: 162px;
-  padding-right: 32px;
+  /*width: 162px;
+  padding-right: 32px;*/
   display: flex;
-  gap: 8px;
+  /*gap: 8px;*/
   font-size: 14px;
   line-height: 16px;
+  width: fit-content;
+
 }

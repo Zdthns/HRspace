@@ -46,17 +46,18 @@ export default function CityPopup({ showPopup, onChange }: TCityPopup) {
             onChange={e => setSearch(e.target.value)}
             value={search}
           />
-          <p>Россия / Регион</p>
+          <h3>Россия / Регион</h3>
           {regions && !region && (
             <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                flexDirection: "column",
-                maxHeight: "100%",
-                // width: "100%",
-                overflow: "auto",
-              }}
+              className={styles.wrapper}
+              //style={{
+              //  display: "flex",
+              //  flexWrap: "wrap",
+              //  flexDirection: "column",
+              //  maxHeight: "100%",
+              //  // width: "100%",
+              //  overflow: "auto",
+              //}}
             >
               <List items={regions} setItem={setRegion} />
             </div>
