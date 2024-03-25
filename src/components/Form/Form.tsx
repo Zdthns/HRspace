@@ -4,14 +4,13 @@ import {
   slideFields,
   type ZForm,
 } from "@/lib/form/form"
-import { DevTool } from "@hookform/devtools"
 import { zodResolver } from "@hookform/resolvers/zod"
+import clsx from "classnames"
 import { useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
-import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "./Slides"
 import { ProgressBar } from "../ProgressBar/ProgressBar"
 import styles from "./Form.module.css"
-import clsx from "classnames"
+import { Slide1, Slide2, Slide3, Slide4, Slide5 } from "./Slides"
 
 export function Form() {
   const methods = useForm<ZForm>({
@@ -129,7 +128,6 @@ export function Form() {
           </form>
         </FormProvider>
       </div>
-      <DevTool control={methods.control} />
     </div>
   )
 }
