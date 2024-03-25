@@ -25,6 +25,7 @@ export function Slide1() {
         <input
           type="text"
           {...register("name")}
+          autoComplete="off"
           placeholder="Грузчик"
           className={inputStyle["input-currency"]}
         />

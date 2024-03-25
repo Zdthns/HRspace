@@ -43,6 +43,7 @@ export function CheckboxGroup<T>({ options, onChange, selectedOptions }: Props<T
           }}
         >
           <input
+            id={option.label}
             className={globalStyle["checkBox"]}
             type="checkbox"
             checked={selected.some(
