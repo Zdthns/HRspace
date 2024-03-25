@@ -3,6 +3,7 @@
 :root {
   --primary-color: #71a2ff;
   --text-link: #188bec;
+  --text-secondary: #60606080;
 }
 
 body {
