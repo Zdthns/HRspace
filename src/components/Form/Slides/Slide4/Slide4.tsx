@@ -18,6 +18,7 @@ export function Slide4() {
     control,
     register,
     trigger,
+    watch
   } = useFormContext<ZSlide4>()
 
   return (
@@ -111,6 +112,7 @@ export function Slide4() {
           <input
             style={{ width: 200 }}
             type="date"
+            min={new Date().toISOString().substring(0, 10)}
             className={inputStyle["input-currency"]}
             {...register("dates.desiredFirstResumeDate")}
           />
@@ -119,6 +121,7 @@ export function Slide4() {
         <h3 style={{ margin: 0 }}>Желаемая дата выхода сотрудника на работу</h3>
         <div>
           <input
+            min={watch("dates.desiredFirstResumeDate")}
             className={inputStyle["input-currency"]}
             style={{ width: 200 }}
             type="date"
