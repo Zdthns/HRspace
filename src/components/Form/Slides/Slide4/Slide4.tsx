@@ -152,6 +152,7 @@ export function Slide4() {
               <input
                 type="number"
                 placeholder="10000"
+                autoComplete="none"
                 {...register("employeeReward", { valueAsNumber: true })}
                 className={clsx(inputStyle["input-currency"])}
               />
